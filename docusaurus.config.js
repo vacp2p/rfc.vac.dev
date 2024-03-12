@@ -4,8 +4,8 @@ require('dotenv').config()
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Codex',
-  url: 'https://docs.codex.storage/',
+  title: 'Vac',
+  url: 'https://rfc.vac.dev/',
   baseUrl: '/',
 
   customFields: {},
@@ -22,12 +22,55 @@ const config = {
     locales: ['en'],
   },
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'codex',
+        path: 'codex',
+        routeBasePath: 'codex',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'nomos',
+        path: 'nomos',
+        routeBasePath: 'nomos',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'status',
+        path: 'status',
+        routeBasePath: 'status',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'vac',
+        path: 'vac',
+        routeBasePath: 'vac',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'waku',
+        path: 'waku',
+        routeBasePath: 'waku',
+      },
+    ],
+  ],
+
   presets: [
     [
       '@acid-info/logos-docusaurus-preset',
       /** @type {import('@acid-info/logos-docusaurus-preset').PluginOptions} */
       ({
-        businessUnit: 'Codex',
+        businessUnit: 'VacResearch',
         theme: {
           name: 'default',
           options: {
