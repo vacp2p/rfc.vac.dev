@@ -2,7 +2,27 @@ const https = require('https')
 const fs = require('fs')
 const path = require('path')
 
-// NOTE: Replace YOUR_GITHUB_TOKEN with your GitHub token
+function loadEnv() {
+  const envPath = path.resolve(process.cwd(), '.env')
+
+  try {
+    const data = fs.readFileSync(envPath, 'utf8')
+
+    data.split('\n').forEach(line => {
+      line = line.trim()
+
+      if (line && !line.startsWith('#')) {
+        const [key, value] = line.split('=')
+        process.env[key.trim()] = value.trim()
+      }
+    })
+  } catch (err) {
+    console.error('Error loading .env file', err)
+  }
+}
+
+loadEnv()
+
 async function fetchFromGitHub(url, callback) {
   https
     .get(
@@ -10,7 +30,8 @@ async function fetchFromGitHub(url, callback) {
       {
         headers: {
           'User-Agent': 'Node.js',
-          Authorization: `token {YOUR_GITHUB_TOKEN}`,
+          // NOTE: Create .env file and add GITHUB_TOKEN=your_token
+          Authorization: `token ${process.env.GITHUB_TOKEN}`,
         },
       },
       res => {

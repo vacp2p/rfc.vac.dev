@@ -19,12 +19,20 @@ $ git clone https://github.com/acid-info/logos-docs-template.git
 $ yarn install
 ```
 
-3. Start the website:
+3. Create .env and run fetch-content.js
+```bash
+GITHUB_TOKEN=
+```
+
+and `node fetch-content.js`
+
+4. Start the website:
+
 ```bash
 $ yarn start
 ```
 
-4. Visit `http://localhost:3000` in your browser
+5. Visit `http://localhost:3000` in your browser
 
 
 ## Configuration
