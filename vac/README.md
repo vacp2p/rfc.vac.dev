@@ -1,4 +1,9 @@
-# Vac Raw Specifications
+# Vac RFCs
 
-All Vac specifications that have not reached **draft** status will live in this repository.
-To learn more about **raw** specifications, take a look at [1/COSS](../1/coss.md).
+Vac builds public good protocols for the decentralise web.
+Vac acts as a custodian for the protocols that live in the RFC-Index repository.
+With the goal of widespread adoption,
+Vac will make sure the protocols adhere to the set of principles, 
+including but not limited to liberty, security, privacy, decentralisation, and inclusivity.
+
+To learn more, visit [Vac Research](https://vac.dev/)

@@ -74,7 +74,10 @@ async function fetchDirectoryContents(dirUrl, basePath, prefixToRemove) {
       function adjustPathForMarkdown(filePath) {
         const parts = filePath.split('/')
 
+        console.log(filePath)
+
         if (parts?.length === 1) return filePath
+        if (filePath.includes('README.md')) return filePath
 
         if (parts[parts.length - 1].endsWith('.md')) {
           parts.splice(parts.length - 2, 1)

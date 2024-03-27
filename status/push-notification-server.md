@@ -406,7 +406,7 @@ message PushNotificationResponse {
 Where `message_id` is the `message_id` sent by the client.
 
 #### Handle Notification Response:
-- A `PushNotificationResponse` message MUST be wrapped in a [`ApplicationMetadataMessage`](../62/payloads.md) with type set to��`PUSH_NOTIFICATION_RESPONSE`.
+- A `PushNotificationResponse` message MUST be wrapped in a [`ApplicationMetadataMessage`](../62/payloads.md) with type set to `PUSH_NOTIFICATION_RESPONSE`.
 
 - The response MUST be sent on the [partitioned topic](../../waku/standards/application/54/x3dh-sessions.md) of the sender and
 MUST not be encrypted using the [secure transport](../../waku/standards/application/53/x3dh.md) to facilitate the usage of ephemeral keys.
