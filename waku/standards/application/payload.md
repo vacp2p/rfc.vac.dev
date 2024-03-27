@@ -6,6 +6,8 @@ editor: Oskar Thoren \<oskarth@titanproxy.com\>
 contributors:
 sidebar_position: 26
 ---
+- Status: draft
+- Editor: Oskar Thoren \<oskarth@titanproxy.com\>
 
 This specification describes how Waku provides confidentiality, authenticity, and integrity, as well as some form of unlinkability.
 Specifically, it describes how encryption, decryption and signing works in [6/WAKU1](../../legacy/6/waku1.md) and in [10/WAKU2 spec](../../core/10/waku2.md) with [14/WAKU-MESSAGE version 1](../../core/14/message.md/#version1).

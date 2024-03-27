@@ -6,6 +6,8 @@ editor: Franck Royer \<franck@status.im\>
 contributors:
 sidebar_position: 20
 ---
+- Status: draft
+- Editor: Franck Royer \<franck@status.im\>
 
 **Content Topics**:
 

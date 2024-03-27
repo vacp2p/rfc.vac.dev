@@ -7,6 +7,10 @@ contributors:
    - Hanno Cornelius \<hanno@status.im\>
 sidebar_position: 22
 ---
+- Status: draft
+- Editor: Franck Royer \<franck@status.im\>
+- Contributors::
+  
 
 **Content Topic**: `/toy-chat/2/huilong/proto`.
 

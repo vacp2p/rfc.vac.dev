@@ -7,6 +7,9 @@ editor: Daniel Kaiser \<danielkaiser@status.im\>
 contributors:
 sidebar_position: 46
 ---
+- Status: raw
+- Category: Standards Track
+- Editor: Daniel Kaiser \<danielkaiser@status.im\>
 
 ## Abstract
 

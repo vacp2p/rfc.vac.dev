@@ -13,6 +13,16 @@ contributors:
   - Daniel Kaiser \<danielkaiser@status.im\>
 sidebar_position: 1
 ---
+- Status: draft
+- Category: Best Current Practice
+- Editor: Oskar Thoren \<oskarth@titanproxy.com\>
+- Contributors::
+  - Pieter Hintjens \<ph@imatix.com\>
+  - André Rebentisch \<andre@openstandards.de\>
+  - Alberto Barrionuevo \<abarrio@opentia.es\>
+  - Chris Puttick \<chris.puttick@thehumanjourney.net\>
+  - Yurii Rashkovskii \<yrashk@gmail.com\>
+  - Daniel Kaiser \<danielkaiser@status.im\>
 
 This document describes a consensus-oriented specification system (COSS) for building interoperable technical specifications.
 COSS is based on a lightweight editorial process that seeks to engage the widest possible range of interested parties and move rapidly to consensus through working code.

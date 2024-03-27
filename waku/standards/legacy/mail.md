@@ -9,6 +9,12 @@ contributors:
   - Oskar Thorén \<oskarth@titanproxy.com\>
 sidebar_position: 8
 ---
+- Status: stable
+- Editor: Andrea Maria Piana \<andreap@status.im\>
+- Contributors::
+  - Adam Babik \<adam@status.im\>
+  - Dean Eigenmann \<dean@status.im\>
+  - Oskar Thorén \<oskarth@titanproxy.com\>
 
 ## Abstract
 

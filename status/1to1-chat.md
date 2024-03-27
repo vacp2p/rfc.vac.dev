@@ -13,6 +13,11 @@ contributors:
 - Dean Eigenmann \<dean@status.im\>
 sidebar_position: 55
 ---
+- Status: draft
+- Category: Standards Track
+- Editor: Aaryamann Challani \<aaryamann@status.im\>
+- Contributors::
+  
 
 ## Abstract
 

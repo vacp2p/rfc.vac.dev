@@ -6,6 +6,8 @@ editor: Daniel Kaiser \<danielkaiser@status.im\>
 contributors:
 sidebar_position: 33
 ---
+- Status: draft
+- Editor: Daniel Kaiser \<danielkaiser@status.im\>
 
 ## Abstract
 

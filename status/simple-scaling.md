@@ -9,6 +9,11 @@ contributors:
 - Alvaro Revuelta \<alrevuelta@status.im\>
 sidebar_position: 57
 ---
+- Status: raw
+- Category: Informational
+- Editor: Daniel Kaiser \<danielkaiser@status.im\>
+- Contributors::
+  
 
 ## Abstract
 

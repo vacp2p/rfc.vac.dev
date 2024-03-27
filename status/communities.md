@@ -9,6 +9,11 @@ contributors:
 - Andrea Piana \<andreap@status.im\>
 sidebar_position: 56
 ---
+- Status: draft
+- Category: Standards Track
+- Editor: Aaryamann Challani \<aaryamann@status.im\>
+- Contributors::
+  
 
 ## Abstract
 

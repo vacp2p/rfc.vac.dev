@@ -10,6 +10,13 @@ contributors:
   - Hanno Cornelius \<hanno@status.im\>
 sidebar_position: 17
 ---
+- Status: draft
+- Editor: Alvaro Revuelta \<alvaro@status.im\>
+- Contributors::
+  - Oskar Thorén \<oskarth@titanproxy.com\>
+  - Aaryamann Challani \<aaryamann@status.im\>
+  - Sanaz Taheri \<sanaz@status.im\>
+  - Hanno Cornelius \<hanno@status.im\>
 
 The `17/WAKU2-RLN-RELAY` protocol is an extension of `11/WAKU2-RELAY` which additionally provides spam protection using [Rate Limiting Nullifiers (RLN)](../../../../vac/32/rln-v1.md). 
 

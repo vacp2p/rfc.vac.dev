@@ -11,6 +11,14 @@ contributors:
   - Hanno Cornelius \<hanno@status.im\>
 sidebar_position: 13
 ---
+- Status: draft
+- Editor: Simon-Pierre Vivier \<simvivier@status.im\>
+- Contributors::
+  - Dean Eigenmann \<dean@status.im\>
+  - Oskar Thorén \<oskarth@titanproxy.com\>
+  - Aaryamann Challani \<aaryamann@status.im\>
+  - Sanaz Taheri \<sanaz@status.im\>
+  - Hanno Cornelius \<hanno@status.im\>
 
 ## Abstract
 This specification explains the `13/WAKU2-STORE` protocol which enables querying of messages received through the relay protocol and 

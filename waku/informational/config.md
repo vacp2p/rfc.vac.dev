@@ -6,6 +6,8 @@ editor: Hanno Cornelius \<hanno@status.im\>
 contributors:
 sidebar_position: 29
 ---
+- Status: draft
+- Editor: Hanno Cornelius \<hanno@status.im\>
 
 `29/WAKU2-CONFIG` describes the RECOMMENDED values to assign to configurable parameters for Waku v2 clients.
 Since Waku v2 is built on [libp2p](https://github.com/libp2p/specs),

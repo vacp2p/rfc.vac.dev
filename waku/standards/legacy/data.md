@@ -8,6 +8,11 @@ contributors:
   - Kim De Mey \<kimdemey@status.im\>
 sidebar_position: 7
 ---
+- Status: stable
+- Editor: Oskar Thorén \<oskarth@titanproxy.com\>
+- Contributors::
+  - Dean Eigenmann \<dean@status.im\>
+  - Kim De Mey \<kimdemey@status.im\>
 
 This specification describes the encryption, decryption and signing of the content in the [data field used in Waku](../6/waku1.md/#abnf-specification).
 

@@ -11,6 +11,14 @@ contributors:
   - Oskar Thorén \<oskarth@titanproxy.com\>
 sidebar_position: 10
 ---
+- Status: draft
+- Editor: Hanno Cornelius \<hanno@status.im\>
+- Contributors::
+  - Sanaz Taheri \<sanaz@status.im\>
+  - Hanno Cornelius \<hanno@status.im\>
+  - Reeshav Khan \<reeshav@status.im\>
+  - Daniel Kaiser \<danielkaiser@status.im\>
+  - Oskar Thorén \<oskarth@titanproxy.com\>
 
 ## Abstract
 

@@ -6,6 +6,8 @@ editor: Oskar Thorén \<oskarth@titanproxy.com\>
 contributors:
 sidebar_position: 30
 ---
+- Status: draft
+- Editor: Oskar Thorén \<oskarth@titanproxy.com\>
 
 This is an informational spec that show cases the concept of adaptive nodes.
 

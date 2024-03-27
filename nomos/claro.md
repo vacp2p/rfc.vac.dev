@@ -12,6 +12,11 @@ contributors:
     - Mark Evenson
 sidebar_position: 38
 ---
+- Status: raw
+- Category: Standards Track
+- Editor: Corey Petty \<corey@status.im\>
+- Contributors::
+  
 
 ## Abstract
 

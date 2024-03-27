@@ -9,6 +9,12 @@ contributors:
   - Daniel Kaiser \<danielkaiser@status.im\>
 sidebar_position: 23
 ---
+- Status: draft
+- Category: Informational
+- Editor: Oskar Thoren \<oskarth@titanproxy.com\>
+- Contributors::
+  - Hanno Cornelius \<hanno@status.im\>
+  - Daniel Kaiser \<danielkaiser@status.im\>
 
 This document outlines recommended usage of topic names in Waku v2.
 In [10/WAKU2 spec](../../standards/core/10/waku2.md) there are two types of topics:

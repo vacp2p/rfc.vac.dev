@@ -10,6 +10,12 @@ contributors:
   - John Lea \<john@status.im\>
 sidebar_position: 61
 ---
+- Status: draft
+- Category: Standards Track
+- Editor: r4bbit \<r4bbit@status.im\>
+- Contributors::
+  - Sanaz Taheri \<sanaz@status.im\>
+  - John Lea \<john@status.im\>
 
 ## Abstract
 

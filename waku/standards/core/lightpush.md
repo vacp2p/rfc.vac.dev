@@ -8,6 +8,11 @@ contributors:
   - Oskar Thorén \<oskarth@titanproxy.com\>
 sidebar_position: 19
 ---
+- Status: draft
+- Editor: Hanno Cornelius \<hanno@status.im\>
+- Contributors::
+  - Daniel Kaiser \<danielkaiser@status.im\>
+  - Oskar Thorén \<oskarth@titanproxy.com\>
 
 **Protocol identifier**: `/vac/waku/lightpush/2.0.0-beta1`
 

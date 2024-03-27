@@ -6,6 +6,8 @@ editor: Hanno Cornelius \<hanno@status.im\>
 contributors:
 sidebar_position: 25
 ---
+- Status: deleted
+- Editor: Hanno Cornelius \<hanno@status.im\>
 
 `25/LIBP2P-DNS-DISCOVERY` specifies a scheme to implement [`libp2p`](https://libp2p.io/) peer discovery via DNS for Waku v2.
 The generalised purpose is to retrieve an arbitrarily long, authenticated, updateable list of [`libp2p` peers](https://docs.libp2p.io/concepts/peer-id/) to bootstrap connection to a `libp2p` network.

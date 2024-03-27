@@ -11,6 +11,10 @@ contributors:
 - Blagoj Dimovski \<blagoj.dimovski@yandex.com\>
 sidebar_position: 32
 ---
+- Status: raw
+- Editor: Rasul Ibragimov \<curryrasul@gmail.com\>
+- Contributors::
+  
 
 ## Abstract
 

@@ -8,6 +8,11 @@ contributors:
   - Oskar Thorén \<oskarth@titanproxy.com\>
 sidebar_position: 9
 ---
+- Status: stable
+- Editor: Andrea Maria Piana \<andreap@status.im\>
+- Contributors::
+  - Dean Eigenmann \<dean@status.im\>
+  - Oskar Thorén \<oskarth@titanproxy.com\>
 
 This specification describes the RPC API that Waku nodes MAY adhere to. The unified API allows clients to easily
 be able to connect to any node implementation. The API described is privileged as a node stores the keys of clients. 

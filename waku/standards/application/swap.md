@@ -6,6 +6,8 @@ editor: Oskar Thorén \<oskarth@titanproxy.com\>
 contributor: Ebube Ud \<ebube@status.im\>
 sidebar_position: 18
 ---
+- Status: draft
+- Editor: Oskar Thorén \<oskarth@titanproxy.com\>
 
 ## Abstract
 

@@ -7,6 +7,9 @@ editor: Daniel Kaiser \<danielkaiser@status.im\>
 contributors:
 sidebar_position: 1
 ---
+- Status: (raw|draft|stable)
+- Category: (Standards Track|Informational|Best Current Practice)
+- Editor: Daniel Kaiser \<danielkaiser@status.im\>
 
 # (Info, remove this section)
 

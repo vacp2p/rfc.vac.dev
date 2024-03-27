@@ -9,6 +9,11 @@ contributors:
   - Andrea Maria Piana \<andreap@status.im\>
 sidebar_position: 71
 ---
+- Status: draft
+- Category: Standards Track
+- Editor: Jimmy Debe \<jimmy@status.im\>
+- Contributors::
+  - Andrea Maria Piana \<andreap@status.im\>
 
 ## Abstract
 A push notification server implementation for IOS devices and Android devices. 

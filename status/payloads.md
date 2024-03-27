@@ -10,6 +10,10 @@ contributors:
 - Samuel Hawksby-Robinson \<samuel@status.im\>
 sidebar_position: 62
 ---
+- Status: draft
+- Editor: r4bbit \<r4bbit@status.im\>
+- Contributors::
+  
 
 ## Abstract
 

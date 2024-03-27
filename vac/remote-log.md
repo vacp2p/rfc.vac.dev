@@ -7,6 +7,10 @@ contributors:
   - Dean Eigenmann \<dean@status.im\>
 sidebar_position: 3
 ---
+- Status: draft
+- Editor: Oskar Thorén \<oskarth@titanproxy.com\>
+- Contributors::
+  - Dean Eigenmann \<dean@status.im\>
 
 A remote log is a replication of a local log. This means a node can read data that originally came from a node that is offline.
 

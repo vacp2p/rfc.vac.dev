@@ -8,6 +8,11 @@ contributors:
   - Oskar Thorén \<oskarth@titanproxy.com\>
 sidebar_position: 2
 ---
+- Status: stable
+- Editor: Sanaz Taheri \<sanaz@status.im\>
+- Contributors::
+  - Dean Eigenmann \<dean@status.im\>
+  - Oskar Thorén \<oskarth@titanproxy.com\>
 
 In this specification, we describe a minimum viable protocol for data synchronization inspired by the Bramble Synchronization Protocol[^1]. This protocol is designed to ensure reliable messaging between peers across an unreliable peer-to-peer (P2P) network where they may be unreachable or unresponsive.
 

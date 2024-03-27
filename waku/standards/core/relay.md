@@ -8,6 +8,11 @@ contributors:
   - Sanaz Taheri \<sanaz@status.im\>
 sidebar_position: 11
 ---
+- Status: stable
+- Editor: Hanno Cornelius \<hanno@status.im\>
+- Contributors::
+  - Oskar Thorén \<oskarth@titanproxy.com\>
+  - Sanaz Taheri \<sanaz@status.im\>
 
 `11/WAKU2-RELAY` specifies a [Publish/Subscribe approach](https://docs.libp2p.io/concepts/publish-subscribe/) to peer-to-peer messaging with a strong focus on privacy, censorship-resistance, security and scalability.
 Its current implementation is a minor extension of the [libp2p GossipSub protocol](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md) and prescribes gossip-based dissemination.

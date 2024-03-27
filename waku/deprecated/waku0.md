@@ -10,6 +10,13 @@ contributors:
   - Kim De Mey \<kimdemey@status.im\>
 sidebar_position: 5
 ---
+- Status: deprecated
+- Editor: Oskar Thorén \<oskarth@titanproxy.com\>
+- Contributors::
+  - Adam Babik \<adam@status.im\>
+  - Andrea Maria Piana \<andreap@status.im\>
+  - Dean Eigenmann \<dean@status.im\>
+  - Kim De Mey \<kimdemey@status.im\>
 
 This specification describes the format of Waku messages within the ÐΞVp2p Wire Protocol. This spec substitutes [EIP-627](https://eips.ethereum.org/EIPS/eip-627). Waku is a fork of the original Whisper protocol that enables better usability for resource restricted devices, such as mostly-offline bandwidth-constrained smartphones. It does this through (a) light node support, (b) historic messages (with a mailserver) (c) expressing topic interest for better bandwidth usage and (d) basic rate limiting.
 

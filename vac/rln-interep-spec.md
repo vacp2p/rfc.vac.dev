@@ -7,6 +7,9 @@ editor: Aaryamann Challani \<aaryamann@status.im\>
 contributors:
 sidebar_position: 48
 ---
+- Status: raw
+- Category:
+- Editor: Aaryamann Challani \<aaryamann@status.im\>
 
 ## Abstract
 

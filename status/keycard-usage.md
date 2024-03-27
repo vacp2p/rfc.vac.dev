@@ -9,6 +9,11 @@ contributors:
   - Jimmy Debe \<jimmy@status.im\>
 sidebar_position: 63
 ---
+- Status: draft
+- Category: Standards Track
+- Editor: Aaryamann Challani \<aaryamann@status.im\>
+- Contributors::
+  - Jimmy Debe \<jimmy@status.im\>
 
 ## Terminology
 

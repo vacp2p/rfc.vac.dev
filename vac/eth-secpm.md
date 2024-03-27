@@ -7,6 +7,9 @@ editor: Ramses Fernandez \<ramses@status.im\>
 contributors:
 sidebar_position: 70
 ---
+- Status: raw
+- Category: Standards Track
+- Editor: Ramses Fernandez \<ramses@status.im\>
 
 ## Motivation
 The need for secure communications has become paramount. 

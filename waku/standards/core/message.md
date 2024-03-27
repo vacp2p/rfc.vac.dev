@@ -12,6 +12,15 @@ contributors:
   - Oskar Thorén \<oskarth@titanproxy.com\>
 sidebar_position: 14
 ---
+- Status: draft
+- Category: Standards Track
+- Editor: Hanno Cornelius \<hanno@status.im\>
+- Contributors::
+  - Sanaz Taheri \<sanaz@status.im\>
+  - Aaryamann Challani \<aaryamann@status.im\>
+  - Lorenzo Delgado \<lorenzo@status.im\>
+  - Abhimanyu Rawat \<abhi@status.im\>
+  - Oskar Thorén \<oskarth@titanproxy.com\>
 
 ## Abstract
 

@@ -5,6 +5,8 @@ status: draft
 editor: Hanno Cornelius \<hanno@status.im\>
 sidebar_position: 15
 ---
+- Status: draft
+- Editor: Hanno Cornelius \<hanno@status.im\>
 
 A bridge between Waku v1 and Waku v2.
 

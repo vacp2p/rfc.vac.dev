@@ -5,6 +5,8 @@ status: draft
 editor: Hanno Cornelius \<hanno@status.im\>
 sidebar_position: 16
 ---
+- Status: draft
+- Editor: Hanno Cornelius \<hanno@status.im\>
 
 ## Introduction
 

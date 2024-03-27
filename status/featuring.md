@@ -6,6 +6,8 @@ description: To gain new members, current SNT holders can vote to feature an act
 editor: Szymon Szlachtowicz \<szymon.s@ethworks.io\>
 sidebar_position: 28
 ---
+- Status: draft
+- Editor: Szymon Szlachtowicz \<szymon.s@ethworks.io\>
 
 ## Abstract
 This specification describes a voting method to feature different active Status Communities.

@@ -7,6 +7,10 @@ contributors:
 - Franck Royer \<franck@status.im\>
 sidebar_position: 36
 ---
+- Status: draft
+- Editor: Richard Ramos \<richard@status.im\>
+- Contributors::
+  
 
 # Introduction
 

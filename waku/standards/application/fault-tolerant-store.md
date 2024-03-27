@@ -6,6 +6,8 @@ editor: Sanaz Taheri \<sanaz@status.im\>
 contributors:
 sidebar_position: 21
 ---
+- Status: draft
+- Editor: Sanaz Taheri \<sanaz@status.im\>
 
  The reliability of [13/WAKU2-STORE](../../core/13/store.md) protocol heavily relies on the fact that full nodes i.e., those who persist messages have high availability and uptime and do not miss any messages. 
  If a node goes offline, then it will risk missing all the messages transmitted in the network during that time. 

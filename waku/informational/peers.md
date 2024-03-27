@@ -6,6 +6,8 @@ editor: Hanno Cornelius \<hanno@status.im\>
 contributors:
 sidebar_position: 27
 ---
+- Status: draft
+- Editor: Hanno Cornelius \<hanno@status.im\>
 
 `27/WAKU2-PEERS` describes a recommended minimal set of peer storage and peer management features to be implemented by Waku v2 clients.
 

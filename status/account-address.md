@@ -11,6 +11,11 @@ contributors:
 - Samuel Hawksby-Robinson \<samuel@status.im\>
 sidebar_position: 65
 ---
+- Status: draft
+- Category: Standards Track
+- Editor: Aaryamann Challani \<aaryamann@status.im\>
+- Contributors::
+  
 
 ## Abstract
 

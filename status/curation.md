@@ -6,6 +6,8 @@ description: A voting protocol for SNT holders to submit votes to a smart contra
 editor: Szymon Szlachtowicz \<szymon.s@ethworks.io\>
 sidebar_position: 24
 ---
+- Status: draft
+- Editor: Szymon Szlachtowicz \<szymon.s@ethworks.io\>
 
 ## Abstract
 This specification is a voting protocol for peers to submit votes to a smart contract. Voting is immutable, 
