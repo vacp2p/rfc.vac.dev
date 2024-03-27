@@ -1,5 +1,6 @@
-## Waku RFCs
+## Deprecated RFCs 
 
-Waku builds a family of privacy-preserving, censorship-resistant communication protocols for web3 applications.
-
-Contributors can visit [Waku RFCs](https://github.com/waku-org/specs) for new Waku specifications under discussion.
+Deprecated specifications are no longer used in Waku products.
+This subdirectory is for achrive purpose and 
+should not be used in production ready implementations.
+Visit [Waku RFCs](https://github.com/waku-org/specs) for new Waku specifications under discussion.

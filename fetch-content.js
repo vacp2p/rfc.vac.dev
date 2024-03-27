@@ -43,7 +43,7 @@ async function fetchFromGitHub(url, callback) {
 
         res.on('end', () => {
           const parsedData = JSON.parse(data)
-          console.log('parsedData:', parsedData)
+          // console.log('parsedData:', parsedData)
           callback(null, parsedData)
         })
       },
@@ -70,7 +70,20 @@ async function fetchDirectoryContents(dirUrl, basePath, prefixToRemove) {
         new RegExp(`^${prefixToRemove}`),
         '',
       )
-      const filePath = path.join(basePath, relativePath)
+
+      function adjustPathForMarkdown(filePath) {
+        const parts = filePath.split('/')
+
+        if (parts?.length === 1) return filePath
+
+        if (parts[parts.length - 1].endsWith('.md')) {
+          parts.splice(parts.length - 2, 1)
+        }
+
+        return parts.join('/')
+      }
+
+      const filePath = path.join(basePath, adjustPathForMarkdown(relativePath))
 
       if (file.type === 'file') {
         await downloadAndSaveFile(file.download_url, filePath)
@@ -85,11 +98,14 @@ function parseSlugFromFrontmatter(content) {
   const frontmatterMatch = content.match(/---\s*\n([\s\S]*?)\n---/)
   if (frontmatterMatch) {
     const frontmatterContent = frontmatterMatch[1]
-    const slugMatch = frontmatterContent.match(/^slug:\s*(\d+)/m)
 
-    if (slugMatch) {
-      return parseInt(slugMatch[1], 10)
+    function extractNumberFromTitle(content) {
+      const parts = content.split('/')
+      return parseInt(parts[0].split(' ')[1], 10)
     }
+
+    const number = extractNumberFromTitle(frontmatterContent)
+    return number
   }
   return 1 // Return null if not found
 }
@@ -108,6 +124,12 @@ async function downloadAndSaveFile(url, filePath) {
         fs.mkdirSync(directory, { recursive: true })
 
         const fileExtension = path.extname(filePath)
+
+        function updateMarkdownImagePath(content, number) {
+          const regex = /(!\[.*?\]\(\.\/)images/g
+
+          return content.replace(regex, `$1${number}/images`)
+        }
 
         if (fileExtension === '.md' || fileExtension === '.mdx') {
           // Remove 'tags' line from frontmatter because the format is wrong
@@ -129,6 +151,8 @@ async function downloadAndSaveFile(url, filePath) {
           // // parse sidebarPosition from the slug in the frontmatter
           const sidebarPosition = parseSlugFromFrontmatter(content) || 1
 
+          content = updateMarkdownImagePath(content, sidebarPosition)
+
           // Insert sidebar_position at the end of frontmatter if it doesn't exist
           if (
             /^---\s*[\s\S]+?---/.test(content) &&
@@ -143,10 +167,10 @@ async function downloadAndSaveFile(url, filePath) {
 
         fs.writeFile(fullFilePath, content, err => {
           if (err) {
-            console.error('Error saving file:', err.message)
+            // console.error('Error saving file:', err.message)
             return
           }
-          console.log('Downloaded and saved:', filePath)
+          // console.log('Downloaded and saved:', filePath)
         })
       })
     })
@@ -163,6 +187,6 @@ directoriesToSync.forEach(dirName => {
   const prefixToRemove = dirName + '/'
 
   fetchDirectoryContents(baseUrl, baseSavePath, prefixToRemove).then(() => {
-    console.log(`Synced ${dirName}`)
+    // console.log(`Synced ${dirName}`)
   })
 })
