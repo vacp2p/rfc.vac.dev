@@ -180,6 +180,10 @@ function parseSlugFromFrontmatter(content) {
   return 1 // Return null if not found
 }
 
+function unescapeHtmlComments(htmlString) {
+  return htmlString.replace(/\\<\!--/g, '<!--').replace(/--\\>/g, '-->')
+}
+
 async function downloadAndSaveFile(url, filePath) {
   https
     .get(url, res => {
@@ -217,6 +221,8 @@ async function downloadAndSaveFile(url, filePath) {
 
           // Replace empty Markdown links with placeholder URL
           content = content.replace(/\[([^\]]+)\]\(\)/g, '[$1](#)')
+
+          content = unescapeHtmlComments(content)
 
           // // parse sidebarPosition from the slug in the frontmatter
           const sidebarPosition = parseSlugFromFrontmatter(content) || 1

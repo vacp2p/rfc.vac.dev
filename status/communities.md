@@ -74,12 +74,12 @@ The following cryptographic primitives are used in the design -
 
 ## Wire format
 
-\<!--   
+<!--   
 The wire format is described first to give an overview of the protocol.
 It is referenced in the flow of community creation and community management.
 More or less an intersection of https://github.com/status-im/specs/blob/403b5ce316a270565023fc6a1f8dec138819f4b0/docs/raw/organisation-channels.md and https://github.com/status-im/status-go/blob/6072bd17ab1e5d9fc42cf844fcb8ad18aa07760c/protocol/protobuf/communities.proto,
 
---\>
+-->
 
 ```protobuf
 syntax = "proto3";
@@ -317,7 +317,7 @@ contentTopic = "/waku/1/0x" + topic + "/rfc26"
 #### Community channels/chats
 
 The unique identifier for a community channel/chat is the chat id.
-\<!-- Don't enforce any constraints on the unique id generation --\>
+<!-- Don't enforce any constraints on the unique id generation -->
 The content topic that Community channels/chats use MUST be the hex-encoded keccak-256 hash of the public key of the community concatenated with the chat id.
 
 ```
@@ -365,7 +365,7 @@ The flows for Community management are as described below.
 1. The Community owner generates a public/private key pair.
 2. The Community owner configures the Community metadata, according to the wire format "CommunityDescription".
 3. The Community owner publishes the Community metadata on a content topic derived from the public key of the Community. 
-the Community metadata SHOULD be encrypted with the public key of the Community. \<!-- TODO: Verify this--\>
+the Community metadata SHOULD be encrypted with the public key of the Community. <!-- TODO: Verify this-->
 The Community metadata MAY be sent during fixed intervals, to ensure that the Community metadata is available to members.
 The Community metadata SHOULD be sent every time the Community metadata is updated.
 4. The Community owner MAY advertise the Community out of band, by sharing the public key of the Community on other mediums of communication.

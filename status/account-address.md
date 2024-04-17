@@ -56,7 +56,7 @@ The Status node verifies or derives everything else associated with the contact 
 ### User Profile Picture
 - An account MAY edit the `IK` generated identicon with a chosen picture.  This picture will become part of the publicly broadcasted profile of the account.
 
-\<!-- TODO: Elaborate on wallet account and multiaccount --\>
+<!-- TODO: Elaborate on wallet account and multiaccount -->
 
 ## Wire Format
 

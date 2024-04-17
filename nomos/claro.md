@@ -123,8 +123,8 @@ The algorithm is divided into 4 phases:
 3. Transition function
 4. Opinion and Decision
 
-\<!-- NOTE from CP: not sure this fits, commenting for now --\>
-\<!-- ### Proposal Identification
+<!-- NOTE from CP: not sure this fits, commenting for now -->
+<!-- ### Proposal Identification
 
 The node has a semantics and serialization of the proposal, of which
 it sets an initial opinion:
@@ -140,7 +140,7 @@ severely constrained in the absence of timeouts for a round to
 proceed.  When a given node has finalized its decision on the
 proposal, it enters a quiescent state in which it optionally discards
 all information gathered during the query process retaining only the
-final opinion on the truth of the proposal. --\>
+final opinion on the truth of the proposal. -->
 
 ### Setup Parameters
 

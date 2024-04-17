@@ -248,7 +248,7 @@ To verify the pin of the keycard.
 
 Status code reference:
 - 3: PIN is valid
-\<!--TODO: what are the other status codes?--\>
+<!--TODO: what are the other status codes?-->
 
 
 ### 9. Change the pin (`/change-pin`)

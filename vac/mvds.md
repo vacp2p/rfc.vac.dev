@@ -114,7 +114,7 @@ Nodes MAY have two modes with which they can send records: `BATCH` and `INTERACT
  3. When a node receives an `ACK`, the `MESSAGE` is removed from the state for the given peer.
  4. All records that require retransmission are added to the payload, given `Send Epoch` has been reached.
 
-\<!-- diagram --\>
+<!-- diagram -->
 
 \<p align="center"\>
     \<img src="../assets/mvds/batch.png" /\>
@@ -125,7 +125,7 @@ Nodes MAY have two modes with which they can send records: `BATCH` and `INTERACT
 
 \> ***NOTE:** Batch mode is higher bandwidth whereas interactive mode is higher latency.*
 
-\<!-- Interactions with state, flow chart with retransmissions? --\>
+<!-- Interactions with state, flow chart with retransmissions? -->
 
 ### Retransmission
 

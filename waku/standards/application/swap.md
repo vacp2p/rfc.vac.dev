@@ -177,7 +177,7 @@ Copyright and related rights waived via [CC0](https://creativecommons.org/public
 3. [Book of Swarm](https://web.archive.org/web/20210126130038/https://gateway.ethswarm.org/bzz/latest.bookofswarm.eth)
 4. [13/WAKU2-STORE](../../core/13/store.md)
 
-\<!--
+<!--
 
 General TODOs:
 
@@ -187,4 +187,4 @@ General TODOs:
 - Illustrate flow
 - Specify chequeboo
 
---\>
+-->

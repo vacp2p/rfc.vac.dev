@@ -286,7 +286,7 @@ message DiscordMessageAttachment {
 A node requires message types to decide how to encrypt a particular message and what metadata needs to be attached when passing a message to the transport layer.
 For more on this, see [10/WAKU2](../../waku/standards/core/10/waku2.md).
 
-\<!-- TODO: This reference is a bit odd, considering the layer payloads should interact with is Secure Transport, and not Whisper/Waku. This requires more detail --\>
+<!-- TODO: This reference is a bit odd, considering the layer payloads should interact with is Secure Transport, and not Whisper/Waku. This requires more detail -->
 
 
 The following messages types MUST be supported:
