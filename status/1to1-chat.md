@@ -145,7 +145,9 @@ message MembershipUpdateEvent {
   }
 }
 ```
+
 <!-- Note: I don't like defining wire formats which are out of the scope of the rfc this way. Should explore alternatives -->
+
 Note that the definitions for `ChatMessage` and `EmojiReaction` can be found in [chat_message.proto](https://github.com/status-im/status-go/blob/5fd9e93e9c298ed087e6716d857a3951dbfb3c1e/protocol/protobuf/chat_message.proto#L1) and [emoji_reaction.proto](https://github.com/status-im/status-go/blob/5fd9e93e9c298ed087e6716d857a3951dbfb3c1e/protocol/protobuf/emoji_reaction.proto).
 
 ##### Chat Created

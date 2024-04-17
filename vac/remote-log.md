@@ -33,7 +33,9 @@ content addressed storage, or the name system. It is assumed these capabilities
 are abstracted away in such a way that any such protocol can easily be
 implemented.
 
+
 <!-- TODO: Elaborate on properties required here. -->
+
 
 ### Payloads
 
@@ -60,7 +62,9 @@ message Content {
 }
 ```
 
+
 <!-- XXX/TODO: Can we get rid of the id/data complication and just use bytes? -->
+
 
 **NS service**:
 
@@ -92,8 +96,12 @@ message Response {
 }
 ```
 
+
 <!-- XXX: Response and data type a bit weird, Ok/Err enum? -->
+
+
 <!-- TODO: Do we want NameInit here? -->
+
 
 **Remote log:**
 
@@ -114,9 +122,13 @@ message RemoteLog {
 }
 ```
 
+
 <!-- TODO: Better name for Pair, Mapping? -->
 
+
+
 <!-- TODO: Consider making more useful in conjunction with metadata field. It makes sense to explicitly list what sequence a message is \<local hash, remote hash, data, seqid\> this way I can easily sync a messages prior or after a specific number. To enable this to be dynamic it might make sense to add page info so that I am aware which page I can find seqid on -->
+
 
 ## Synchronization
 
@@ -133,12 +145,18 @@ The *remote log* protobuf is what is stored in the name system.
 
 "Bob" can represent anything from 0 to N participants. Unlike Alice, Bob only needs read-only access to NS and CAS.
 
+
 <!-- TODO: Document random node as remote log -->
+
+
 <!-- TODO: Document how to find initial remote log (e.g. per sync contexts -->
+
 
 ### Flow
 
+
 <!-- diagram -->
+
 
 \<p align="center"\>
     \<img src="./images/remote-log.png" /\>
@@ -146,7 +164,9 @@ The *remote log* protobuf is what is stored in the name system.
     Figure 1: Remote log data synchronization.
 \</p\>
 
+
 <!-- Document the flow wrt operations -->
+
 
 ### Remote log
 
@@ -202,9 +222,13 @@ log. The latter is useful for things like backups on durable storage.
 The pointer to the 'next page' is another remote log entry, at a previous point
 in time.
 
+
 <!-- TODO: Determine requirement re overlapping, adjacent, and/or missing entries -->
 
+
+
 <!-- TODO: Document message ordering append only requirements -->
+
 
 ### Interaction with MVDS
 

@@ -25,7 +25,9 @@ Peers that violate the messaging rate are considered spammers and their message 
 Spammers are also financially punished and removed from the system. 
 
 
+
 <!-- **Protocol identifier***: `/vac/waku/waku-rln-relay/2.0.0-alpha1` -->
+
 
 ## Motivation
 
@@ -50,7 +52,9 @@ The higher-level layers adopting `17/WAKU2-RLN-RELAY` MAY choose to enforce the 
 
 ### Setup and Registration
 Peers subscribed to a specific `pubsubTopic` form a [RLN group](../../../../vac/32/rln-v1.md).
+
 <!-- link to the RLN group definition in the RLN RFC -->
+
 Peers MUST be registered to the RLN group to be able to publish messages.
 Registration is moderated through a smart contract deployed on the Ethereum blockchain. 
 Each peer has an [RLN key pair](../../../../vac/32/rln-v1.md) denoted by `sk`  and `pk`.
@@ -59,7 +63,9 @@ The state of the membership contract contains the list of registered members' pu
 For the registration, a peer creates a transaction that invokes the registration function of the contract via which registers its `pk` in the group. 
 The transaction also transfers some amount of ether to the contract to be staked. 
 This amount is denoted by `staked_fund` and is a system parameter.
-The peer who has the secret key `sk` associated with a registered `pk` would be able to withdraw a portion `reward_portion` of the staked fund by providing valid proof. <!-- a secure way to prove the possession of a pk is yet under discussion, maybe via commit and reveal -->
+The peer who has the secret key `sk` associated with a registered `pk` would be able to withdraw a portion `reward_portion` of the staked fund by providing valid proof. 
+<!-- a secure way to prove the possession of a pk is yet under discussion, maybe via commit and reveal -->
+
 `reward_portion` is also a system parameter.
 
 Note that  `sk` is initially only known to its owning peer however, it may get exposed to other peers in case the owner attempts spamming the system i.e., sending more than one message per `epoch`.
@@ -92,7 +98,9 @@ The `proof` field is a zero-knowledge proof signifying that:
 3. The `nullifier` is constructed correctly.
 For more details about the proof generation check [RLN](../../../../vac/32/rln-v1.md)
 The proof generation relies on the knowledge of two pieces of private information i.e., `sk` and `authPath`.
-The `authPath` is a subset of Merkle tree nodes by which a peer can prove the inclusion of its `pk` in the group. <!-- TODO refer to RLN RFC for authPath def -->
+The `authPath` is a subset of Merkle tree nodes by which a peer can prove the inclusion of its `pk` in the group. 
+<!-- TODO refer to RLN RFC for authPath def -->
+
 The proof generation also requires a set of public inputs which are: the Merkle tree root `merkle_root`, the current `epoch`, and the message for which the proof is going to be generated. 
 In `17/WAKU2-RLN-RELAY`, the message is the concatenation of `WakuMessage`'s  `payload` filed and its `contentTopic` i.e., `payload||contentTopic`. 
 
@@ -153,7 +161,9 @@ The `sk` then can be used to delete the spammer from the group and withdraw a po
 An overview of the routing procedure and slashing is provided in Figure 2.
 
 
+
 <!-- TODO: may consider [validator functions](https://github.com/libp2p/specs/tree/master/pubsub#topic-validation) or [extended validators](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/gossipsub-v1.1.md#extended-validators) for the spam detection -->
+
 
 ![Figure 2: Publishing, Routing and Slashing workflow.](./17/images/rln-message-verification.png)
 
@@ -198,7 +208,9 @@ Below is the description of the fields of `RateLimitProof` and their types.
 | ----: | ----------- | ----------- |
 | `proof` | array of 256 bytes | the zkSNARK proof as explained in the [Publishing process](##Publishing) |
 | `merkle_root` | array of 32 bytes in little-endian order | the root of membership group Merkle tree at the time of publishing the message |
-| `share_x` and `share_y`| array of 32 bytes each | Shamir secret shares of the user's secret identity key `sk` . `share_x` is the Poseidon hash of the `WakuMessage`'s `payload` concatenated with its `contentTopic` . `share_y` is calculated using [Shamir secret sharing scheme](../../../../vac/32/rln-v1.md) | <!-- todo specify the poseidon hash setting -->
+| `share_x` and `share_y`| array of 32 bytes each | Shamir secret shares of the user's secret identity key `sk` . `share_x` is the Poseidon hash of the `WakuMessage`'s `payload` concatenated with its `contentTopic` . `share_y` is calculated using [Shamir secret sharing scheme](../../../../vac/32/rln-v1.md) | 
+<!-- todo specify the poseidon hash setting -->
+
 | `nullifier`  | array of 32 bytes | internal nullifier derived from `epoch` and peer's `sk` as explained in [RLN construct](../../../../vac/32/rln-v1.md)|
 
 

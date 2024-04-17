@@ -26,10 +26,12 @@ As such the scope is limited to defining a separate [`protocol id`](https://gith
 The `11/WAKU2-RELAY` protocol is designed to provide the following security properties under a static [Adversarial Model](#adversarial-model).
 Note that data confidentiality, integrity, and authenticity are currently considered out of scope for `11/WAKU2-RELAY` and must be handled by higher layer protocols such as [`14/WAKU2-MESSAGE`](../14/message.md).
 
+
 <!-- May add the definition of the unsupported feature: 
 Confidentiality indicates that an adversary should not be able to learn the data carried by the `WakuRelay` protocol.
 Integrity indicates that the data transferred by the `WakuRelay` protocol can not be tampered with by an adversarial entity without being detected.
 Authenticity no adversary can forge data on behalf of a targeted publisher and make it accepted by other subscribers as if the origin is the target. -->
+
 
 - **Publisher-Message Unlinkability**:
 This property indicates that no adversarial entity can link a published `Message` to its publisher.
@@ -38,7 +40,9 @@ This feature also implies the unlinkability of the publisher to its published to
 - **Subscriber-Topic Unlinkability**:
 This feature stands for the inability of any adversarial entity from linking a subscriber to its subscribed topic IDs.
 
+
 <!-- TODO: more requirements can be added, but that needs further and deeper investigation-->
+
 
 ### Terminology
 
@@ -133,7 +137,9 @@ Note that this does not merely imply that these fields be empty, but that they M
 
 ## Security Analysis
 
+
 <!-- TODO: realized that the prime security objective of the `WakuRelay` protocol is to provide peers unlinkability as such this feature is prioritized over other features e.g., unlinkability is preferred over authenticity and integrity. It might be good to motivate unlinkability and its impact on the relay protocol or other protocols invoking relay protocol.-->
+
 
 - **Publisher-Message Unlinkability**:
 To address publisher-message unlinkability, one should remove any PII from the published message.
@@ -141,7 +147,9 @@ As such, `11/WAKU2-RELAY` follows the `StrictNoSign` policy as described in [lib
 As the result of the `StrictNoSign` policy, `Message`s should be built without the  `from`, `signature` and `key` fields since each of these three fields individually counts as PII for the author of the message (one can link the creation of the message with libp2p peerId and thus indirectly with the IP address of the publisher). 
 Note that removing identifiable information from messages cannot lead to perfect unlinkability.
 The direct connections of a publisher might be able to figure out which `Message`s belong to that publisher by analyzing its traffic.
-The possibility of such inference may get higher when the `data` field is also not encrypted by the upper-level protocols. <!-- TODO: more investigation on traffic analysis attacks and their success probability-->
+The possibility of such inference may get higher when the `data` field is also not encrypted by the upper-level protocols. 
+<!-- TODO: more investigation on traffic analysis attacks and their success probability-->
+
 
 - **Subscriber-Topic Unlinkability:**
 To preserve subscriber-topic unlinkability, it is recommended by [`10/WAKU2`](../10/waku2.md) to use a single PubSub topic in the `11/WAKU2-RELAY` protocol.
@@ -159,13 +167,17 @@ At a high level, peers utilize a scoring function to locally score the behavior 
 `11/WAKU2-RELAY` aims at enabling an advanced spam protection mechanism with economic disincentives by utilizing Rate Limiting Nullifiers.
 In a nutshell, peers must conform to a certain message publishing rate per a system-defined epoch, otherwise, they get financially penalized for exceeding the rate.
 More details on this new technique can be found in [`17/WAKU2-RLN-RELAY`](../17/rln-relay.md). 
-  <!-- TODO havn't checked if all the measures in libp2p GossipSub v1.1 are taken in the nim-libp2p as well, may need to audit the code --> 
+  
+<!-- TODO havn't checked if all the measures in libp2p GossipSub v1.1 are taken in the nim-libp2p as well, may need to audit the code -->
+ 
 
 - Providing **Unlinkability**, **Integrity** and  **Authenticity** simultaneously:
 Integrity and authenticity are typically addressed through digital signatures and Message Authentication Code (MAC) schemes, however, the usage of digital signatures (where each signature is bound to a particular peer) contradicts with the unlinkability requirement (messages signed under a certain signature key are verifiable by a verification key that is bound to a particular publisher).
 As such, integrity and authenticity are missing features in `11/WAKU2-RELAY` in the interest of unlinkability.
 In future work, advanced signature schemes like group signatures can be utilized to enable authenticity, integrity, and unlinkability simultaneously.
-In a group signature scheme, a member of a group can anonymously sign a message on behalf of the group as such the true signer is indistinguishable from other group members. <!-- TODO: shall I add a reference for group signatures?-->
+In a group signature scheme, a member of a group can anonymously sign a message on behalf of the group as such the true signer is indistinguishable from other group members. 
+<!-- TODO: shall I add a reference for group signatures?-->
+
 
 ## Copyright
 

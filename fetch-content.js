@@ -181,7 +181,7 @@ function parseSlugFromFrontmatter(content) {
 }
 
 function unescapeHtmlComments(htmlString) {
-  return htmlString.replace(/\\<\!--/g, '<!--').replace(/--\\>/g, '-->')
+  return htmlString.replace(/\\<\!--/g, '\n<!--').replace(/--\\>/g, '-->\n')
 }
 
 async function downloadAndSaveFile(url, filePath) {
