@@ -1,12 +1,12 @@
 ---
 title: 18/WAKU2-SWAP
 name: Waku SWAP Accounting
-status: draft
+status: deprecated
 editor: Oskar Thorén \<oskarth@titanproxy.com\>
 contributor: Ebube Ud \<ebube@status.im\>
 sidebar_position: 18
 ---
-- Status: draft
+- Status: deprecated
 - Editor: Oskar Thorén \<oskarth@titanproxy.com\>
 
 ## Abstract
