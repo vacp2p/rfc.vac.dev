@@ -19,12 +19,11 @@ $ git clone https://github.com/acid-info/logos-docs-template.git
 $ yarn install
 ```
 
-3. Create .env and run fetch-content.js
+3. Create .env and run the scraping script
+and 
 ```bash
-GITHUB_TOKEN=
+$ yarn scrape
 ```
-
-and `node fetch-content.js`
 
 4. Start the website:
 
