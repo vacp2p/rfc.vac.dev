@@ -5,7 +5,6 @@ status: (raw|draft|stable)
 category: (Standards Track|Informational|Best Current Practice)
 editor: Daniel Kaiser \<danielkaiser@status.im\>
 contributors:
-sidebar_position: 1
 ---
 - Status: (raw|draft|stable)
 - Category: (Standards Track|Informational|Best Current Practice)
