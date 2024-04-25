@@ -1,6 +1,7 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 require('dotenv').config()
+const { sidebarItemsGenerator } = require("./docusaurus-utils/sidebar/generator")
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -29,6 +30,7 @@ const config = {
         id: 'codex',
         path: 'codex',
         routeBasePath: 'codex',
+        sidebarItemsGenerator,
       },
     ],
     [
@@ -37,6 +39,7 @@ const config = {
         id: 'nomos',
         path: 'nomos',
         routeBasePath: 'nomos',
+        sidebarItemsGenerator,
       },
     ],
     [
@@ -45,6 +48,7 @@ const config = {
         id: 'status',
         path: 'status',
         routeBasePath: 'status',
+        sidebarItemsGenerator,
       },
     ],
     [
@@ -53,6 +57,7 @@ const config = {
         id: 'vac',
         path: 'vac',
         routeBasePath: 'vac',
+        sidebarItemsGenerator,
       },
     ],
     [
@@ -61,6 +66,7 @@ const config = {
         id: 'waku',
         path: 'waku',
         routeBasePath: 'waku',
+        sidebarItemsGenerator,
       },
     ],
   ],

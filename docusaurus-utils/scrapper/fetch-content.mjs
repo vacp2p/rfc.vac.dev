@@ -43,7 +43,8 @@ export async function fetchDirectoryContents(dirUrl, basePath, prefixToRemove) {
     for (const file of files) {
       const prefixRemovalRegex = new RegExp(`^${prefixToRemove}`)
       const relativePath = file.path.replace(prefixRemovalRegex, '')
-      const filePath = path.join(basePath, adjustPathForMarkdown(relativePath))
+      // const filePath = path.join(basePath, adjustPathForMarkdown(relativePath))
+      const filePath = path.join(basePath, relativePath)
 
       if (file.type === 'file') {
         await downloadAndModifyFile(file.download_url, filePath)

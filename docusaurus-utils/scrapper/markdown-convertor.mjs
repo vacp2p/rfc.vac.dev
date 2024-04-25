@@ -86,10 +86,16 @@ function unescapeHtmlComments(htmlString) {
   return htmlString.replace(/\\<\!--/g, '\n<!--').replace(/--\\>/g, '-->\n')
 }
 
-function updateMarkdownImagePath(content, number) {
-  const regex = /(!\[.*?\]\(\.\/)images/g
+function updateMarkdownLinksToExcludeMD(content) {
+  function replaceLinks(match, p1, p2, p3) {
+    let url = p2.replace(/\.md$/, ''); // Remove .md extension from URL
+    let anchor = p3.replace(/^\//, ''); // Remove preceding '/' from anchor if exists
+    return `[${p1}](${url}${anchor ? '#' + anchor : ''})`;
+  }
 
-  return content.replace(regex, `$1${number}/images`)
+  const regex = /\[((?:(?!\]).)+)\]\(([^)]*?\.md)(?:\/#|\/#)?([^)]*)\)/g
+
+  return content.replace(regex, replaceLinks)
 }
 
 export function vacMarkdownToDocusaurusMarkdown(fileContent) {
@@ -113,23 +119,9 @@ export function vacMarkdownToDocusaurusMarkdown(fileContent) {
 
   convertedContent = unescapeHtmlComments(convertedContent)
 
-  // // parse sidebarPosition from the slug in the frontmatter
-  const sidebarPosition = parseSlugFromFrontmatter(convertedContent) || 1
-
   convertedContent = enhanceMarkdownWithBulletPointsCorrected(convertedContent)
 
-  convertedContent = updateMarkdownImagePath(convertedContent, sidebarPosition)
-
-  // Insert sidebar_position at the end of frontmatter if it doesn't exist
-  if (
-    /^---\s*[\s\S]+?---/.test(convertedContent) &&
-    !/sidebar_position: \d+/.test(convertedContent)
-  ) {
-    convertedContent = convertedContent.replace(
-      /^---\s*([\s\S]+?)---/,
-      `---\n$1sidebar_position: ${sidebarPosition}\n---`,
-    )
-  }
+  convertedContent = updateMarkdownLinksToExcludeMD(convertedContent)
 
   return convertedContent;
 }
