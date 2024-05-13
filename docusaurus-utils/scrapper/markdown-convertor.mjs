@@ -14,7 +14,7 @@ function enhanceMarkdownWithBulletPointsCorrected(input) {
       inFrontMatter = !inFrontMatter
       if (!inFrontMatter && contributorsLines.length) {
         // We're exiting frontmatter; time to add contributors
-        extractedFields.push(`contributors\n${contributorsLines.join('\n')}`)
+        extractedFields.push(`contributors\n${contributorsLines.join('\n')}\n`)
         contributorsLines = [] // Reset for safety
       }
       return line // Keep the frontmatter delimiters
@@ -80,11 +80,34 @@ function parseSlugFromFrontmatter(content) {
   return 1 // Return null if not found
 }
 
+// Escape < and > with &lt; and &gt;, respectively
+// Be cautious with this replacement; adjust as needed based on your context
 function escapeHtmlTagSymbols(content) {
-  // Escape < and > with &lt; and &gt;, respectively
-  // Be cautious with this replacement; adjust as needed based on your context
-  content = content.replace(/(?<!`)<(?!.*?`)/g, '&lt;')
-  content = content.replace(/(?<!`)>(?!.*?`)/g, '&gt;')
+  function replaceComparisonSymbol(text, symbol) {
+    // Regex to match everything, but we'll handle what to replace in the callback
+    let regex = /(```[\s\S]+?```|`[^`]*`)|(<)/g;
+    let replacementString = "&lt;";
+
+    if (symbol === ">") {
+      regex = /(```[\s\S]+?```|`[^`]*`)|(>)/g;
+      replacementString = "&gt;";
+    }
+
+    return text.replace(regex, function(match, code, lessThan) {
+      if (code) {
+        // It's a code segment, return it unchanged
+        return code;
+      } else if (lessThan) {
+        // It's a '<' outside of code blocks, replace with '&lt;'
+        return replacementString;
+      }
+      // Default return (though practically unused in this setup)
+      return match;
+    });
+  }
+
+  content = replaceComparisonSymbol(content, "<")
+  content = replaceComparisonSymbol(content, ">")
 
   return content;
 }

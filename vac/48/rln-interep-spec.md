@@ -3,12 +3,12 @@ title: 48/RLN-INTEREP-SPEC
 name: Interep as group management for RLN
 status: raw
 category:  
-editor: Aaryamann Challani \<aaryamann@status.im\>
+editor: Aaryamann Challani &lt;aaryamann@status.im&gt;
 contributors:
 ---
 - Status: raw
 - Category:
-- Editor: Aaryamann Challani \<aaryamann@status.im\>
+- Editor: Aaryamann Challani &lt;aaryamann@status.im&gt;
 
 ## Abstract
 

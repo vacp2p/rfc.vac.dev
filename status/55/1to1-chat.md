@@ -4,18 +4,23 @@ name: Status 1-to-1 Chat
 status: draft
 category: Standards Track
 description: A chat protocol to send public and private messages to a single recipient by the Status app.
-editor: Aaryamann Challani \<aaryamann@status.im\>
+editor: Aaryamann Challani &lt;aaryamann@status.im&gt;
 contributors:
-- Andrea Piana \<andreap@status.im\>
-- Pedro Pombeiro \<pedro@status.im\>
-- Corey Petty \<corey@status.im\>
-- Oskar Thorén \<oskarth@titanproxy.com\>
-- Dean Eigenmann \<dean@status.im\>
+- Andrea Piana &lt;andreap@status.im&gt;
+- Pedro Pombeiro &lt;pedro@status.im&gt;
+- Corey Petty &lt;corey@status.im&gt;
+- Oskar Thorén &lt;oskarth@titanproxy.com&gt;
+- Dean Eigenmann &lt;dean@status.im&gt;
 ---
 - Status: draft
 - Category: Standards Track
-- Editor: Aaryamann Challani \<aaryamann@status.im\>
-- Contributors::
+- Editor: Aaryamann Challani &lt;aaryamann@status.im&gt;
+- Contributors:
+  - Andrea Piana &lt;andreap@status.im&gt;
+  - Pedro Pombeiro &lt;pedro@status.im&gt;
+  - Corey Petty &lt;corey@status.im&gt;
+  - Oskar Thorén &lt;oskarth@titanproxy.com&gt;
+  - Dean Eigenmann &lt;dean@status.im&gt;
   
 
 ## Abstract

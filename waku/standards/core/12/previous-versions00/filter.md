@@ -2,21 +2,20 @@
 title: 12/WAKU2-FILTER
 name: Waku v2 Filter
 status: draft
-editor: Hanno Cornelius \<hanno@status.im\>
+editor: Hanno Cornelius &lt;hanno@status.im&gt;
 contributors:
-  - Dean Eigenmann \<dean@status.im\>
-  - Oskar Thorén \<oskarth@titanproxy.com\>
-  - Sanaz Taheri \<sanaz@status.im\>
-  - Ebube Ud \<ebube@status.im\>
+  - Dean Eigenmann &lt;dean@status.im&gt;
+  - Oskar Thorén &lt;oskarth@titanproxy.com&gt;
+  - Sanaz Taheri &lt;sanaz@status.im&gt;
+  - Ebube Ud &lt;ebube@status.im&gt;
 ---
 - Status: draft
-- Editor: Hanno Cornelius \<hanno@status.im\>
-- Contributors::
-  - Dean Eigenmann \<dean@status.im\>
-  - Oskar Thorén \<oskarth@titanproxy.com\>
-  - Sanaz Taheri \<sanaz@status.im\>
-  - Ebube Ud \<ebube@status.im\>
-- Contributors::
+- Editor: Hanno Cornelius &lt;hanno@status.im&gt;
+- Contributors:
+  - Dean Eigenmann &lt;dean@status.im&gt;
+  - Oskar Thorén &lt;oskarth@titanproxy.com&gt;
+  - Sanaz Taheri &lt;sanaz@status.im&gt;
+  - Ebube Ud &lt;ebube@status.im&gt;
   
 version: 00
 

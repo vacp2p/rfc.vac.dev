@@ -2,10 +2,10 @@
 title: 16/WAKU2-RPC
 name: Waku v2 RPC API
 status: deprecated
-editor: Hanno Cornelius \<hanno@status.im\>
+editor: Hanno Cornelius &lt;hanno@status.im&gt;
 ---
 - Status: deprecated
-- Editor: Hanno Cornelius \<hanno@status.im\>
+- Editor: Hanno Cornelius &lt;hanno@status.im&gt;
 
 ## Introduction
 
@@ -57,13 +57,13 @@ Refer to [`Waku Message` specification](../14/message) for more information.
 
 ## Method naming
 
-The JSON-RPC methods in this document are designed to be mappable to HTTP REST endpoints. Method names follow the pattern `\<method_type\>_waku_\<protocol_version\>_\<api\>_\<api_version\>_\<resource\>`
+The JSON-RPC methods in this document are designed to be mappable to HTTP REST endpoints. Method names follow the pattern `<method_type>_waku_<protocol_version>_<api>_<api_version>_<resource>`
 
-- `\<method_type\>`: prefix of the HTTP method type that most closely matches the JSON-RPC function. Supported `method_type` values are `get`, `post`, `put`, `delete` or `patch`.
-- `\<protocol_version\>`: Waku version. Currently **v2**.
-- `\<api\>`: one of the listed APIs below, e.g. `store`, `debug`, or `relay`.
-- `\<api_version\>`: API definition version. Currently **v1** for all APIs.
-- `\<resource\>`: the resource or resource path being addressed
+- `<method_type>`: prefix of the HTTP method type that most closely matches the JSON-RPC function. Supported `method_type` values are `get`, `post`, `put`, `delete` or `patch`.
+- `<protocol_version>`: Waku version. Currently **v2**.
+- `<api>`: one of the listed APIs below, e.g. `store`, `debug`, or `relay`.
+- `<api_version>`: API definition version. Currently **v1** for all APIs.
+- `<resource>`: the resource or resource path being addressed
 
 The method `post_waku_v2_relay_v1_message`, for example, would map to the HTTP REST endpoint `POST /waku/v2/relay/v1/message`.
 

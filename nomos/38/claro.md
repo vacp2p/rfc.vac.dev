@@ -3,18 +3,20 @@ title: 38/CONSENSUS-CLARO
 name: Claro Consensus Protocol
 status: raw
 category: Standards Track
-editor: Corey Petty \<corey@status.im\>
+editor: Corey Petty &lt;corey@status.im&gt;
 created: 01-JUL-2022
-revised: \<2022-08-26 Fri 13:11Z\>
-uri: \<https://rdf.logos.co/protocol/Claro/1/0/0#\<2022-08-26%20Fri$2013:11Z\>
+revised: &lt;2022-08-26 Fri 13:11Z&gt;
+uri: &lt;https://rdf.logos.co/protocol/Claro/1/0/0#&lt;2022-08-26%20Fri$2013:11Z&gt;
 contributors:
     - Álvaro Castro-Castilla 
     - Mark Evenson
 ---
 - Status: raw
 - Category: Standards Track
-- Editor: Corey Petty \<corey@status.im\>
-- Contributors::
+- Editor: Corey Petty &lt;corey@status.im&gt;
+- Contributors:
+  - Álvaro Castro-Castilla
+  - Mark Evenson
   
 
 ## Abstract
@@ -132,7 +134,7 @@ The node has a semantics and serialization of the proposal, of which
 it sets an initial opinion:
 
      opinion
-        \<-- initial opinion on truth of the proposal
+        &lt;-- initial opinion on truth of the proposal
             as one of: {NO, NONE, YES}
     
 The proposal proceeds in asynchronous rounds, in which each node
@@ -154,35 +156,35 @@ The node initializes the following integer ratios as constants:
 
 # 
 confidence_threshold
-  \<-- 1   
+  <-- 1   
          
 # constant look ahead for number of rounds we expect to finalize a
 # decision.  Could be set dependent on number of nodes 
 # visible in the current gossip graph.
 look_ahead 
-  \<-- 19
+  <-- 19
 
 # the confidence weighting parameter (aka alpha_1)
 certainty 
-  \<-- 4 / 5  
+  <-- 4 / 5  
 doubt ;; the lack of confidence weighting parameter (aka alpha_2)
-  \<-- 2 / 5 
+  <-- 2 / 5 
 
 k_multiplier     ;; neighbor threshold multiplier
-  \<-- 2
+  <-- 2
 
 ;;; maximal threshold multiplier, i.e. we will never exceed 
 ;;; questioning k_initial * k_multiplier ^ max_k_multiplier_power peers
 max_k_multiplier_power 
-  \<-- 4
+  <-- 4
     
 ;;; Initial number of nodes queried in a round
 k_initial 
-  \<-- 7
+  <-- 7
 
 ;;; maximum query rounds before termination
 max_rounds ;; placeholder for simulation work, no justification yet
-   \<-- 100 
+   <-- 100 
 ```
       
 The following variables are needed to keep the state of Claro:
@@ -190,17 +192,17 @@ The following variables are needed to keep the state of Claro:
 ```
 ;; current number of nodes to attempt to query in a round
 k 
-  \<-- k_original
+  <-- k_original
   
 ;; total number of votes examined over all rounds
 total_votes 
-   \<-- 0 
+   <-- 0 
 ;; total number of YES (i.e. positive) votes for the truth of the proposal
 total_positive 
-   \<-- 0
+   <-- 0
 ;; the current query round, an integer starting from zero
 round
-  \<-- 0
+  <-- 0
 ```
 
 
@@ -252,9 +254,9 @@ When the query finishes, the node now initializes the following two
 values:
 
     new_votes 
-      \<-- |total vote replies received in this round to the current query|
+      &lt;-- |total vote replies received in this round to the current query|
     positive_votes 
-      \<-- |YES votes received from the query| 
+      &lt;-- |YES votes received from the query| 
     
 ### Phase Two: Computation
 When the query returns, three ratios are used later on to compute the
@@ -291,15 +293,15 @@ in the query round through the following algorithm:
     total_positive 
       +== positive_votes
     confidence 
-      \<-- total_votes / (total_votes + look_ahead) 
+      &lt;-- total_votes / (total_votes + look_ahead) 
     total_evidence 
-      \<-- total_positive / total_votes
+      &lt;-- total_positive / total_votes
     new_evidence 
-      \<-- positive_votes / new_votes
+      &lt;-- positive_votes / new_votes
     evidence 
-      \<-- new_evidence * ( 1 - confidence ) + total_evidence * confidence 
+      &lt;-- new_evidence * ( 1 - confidence ) + total_evidence * confidence 
     alpha 
-      \<-- doubt * ( 1 - confidence ) + certainty * confidence 
+      &lt;-- doubt * ( 1 - confidence ) + certainty * confidence 
     
 ### Phase Three: Computation
 In order to eliminate the need for a step function (a conditional in
@@ -352,13 +354,13 @@ examining the relationship between the evidence accumulated for a
 proposal with the confidence encoded in the `alpha` parameter:
 
     IF
-      evidence \> alpha
+      evidence &gt; alpha
     THEN 
-      opinion \<-- YES
+      opinion &lt;-- YES
     ELSE IF       
-      evidence \< 1 - alpha
+      evidence &lt; 1 - alpha
     THEN 
-      opinion \<-- NO
+      opinion &lt;-- NO
        
 If the opinion of the node is `NONE` after evaluating the relation
 between `evidence` and `alpha`, adjust the number of uniform randomly
@@ -369,9 +371,9 @@ up to the limit of `k_max_multiplier_power` query size increases.
     WHEN
          opinion is NONE
       AND 
-         k \< k_original * k_multiplier ^ max_k_multiplier_power
+         k &lt; k_original * k_multiplier ^ max_k_multiplier_power
     THEN 
-       k \<-- k * k_multiplier
+       k &lt;-- k * k_multiplier
 
 ###  Decision 
 The next step is a simple one: change our opinion if the threshold
@@ -384,9 +386,9 @@ directly related to the number of total votes received.
 Decision
 $$
 \begin{array}{cl}
-evidence \> \alpha & \implies \text{opinion YES} \newline
-evidence \< 1 - \alpha & \implies \text{opinion NO} \newline
-if\ \text{confidence} \> c_{target} & THEN \ \text{finalize decision} \newline
+evidence &gt; \alpha & \implies \text{opinion YES} \newline
+evidence &lt; 1 - \alpha & \implies \text{opinion NO} \newline
+if\ \text{confidence} &gt; c_{target} & THEN \ \text{finalize decision} \newline
 \end{array}
 $$
 
@@ -398,11 +400,11 @@ opinion is response to further queries from other nodes on the
 network.
  
     IF 
-      confidence \> confidence_threshold
+      confidence &gt; confidence_threshold
     OR 
-      round \> max_rounds
+      round &gt; max_rounds
     THEN
-      finalized \<-- T
+      finalized &lt;-- T
       QUERY LOOP TERMINATES
     ELSE 
       round +== 1
@@ -474,11 +476,11 @@ the validity of the following statements expressed in Notation3 (aka
 
 
 ```n3
-@prefix rdf:         \<http://www.w3.org/1999/02/22-rdf-syntax-ns#\> .
-@prefix rdfs:        \<http://www.w3.org/2000/01/rdf-schema#\> .
-@prefix xsd:         \<http://www.w3.org/2001/XMLSchema#\> .
+@prefix rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:        <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:         <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix Claro      \<https://rdf.logos.co/protocol/Claro#\> .
+@prefix Claro      <https://rdf.logos.co/protocol/Claro#> .
 
 Claro:query
   :holds (
@@ -605,36 +607,36 @@ they should be of stable interest no matter if Claro isn't.
 
 ## Informative References
 
-0. [Logos](\<https://logos.co/\>)
+0. [Logos](&lt;https://logos.co/&gt;)
 
 1. [On BFT Consensus Evolution: From Monolithic to
-   DAG](\<https://dahliamalkhi.github.io/posts/2022/06/dag-bft/\>)
+   DAG](&lt;https://dahliamalkhi.github.io/posts/2022/06/dag-bft/&gt;)
 
-2. [snow-ipfs](\<https://ipfs.io/ipfs/QmUy4jh5mGNZvLkjies1RWM4YuvJh5o2FYopNPVYwrRVGV\>)
+2. [snow-ipfs](&lt;https://ipfs.io/ipfs/QmUy4jh5mGNZvLkjies1RWM4YuvJh5o2FYopNPVYwrRVGV&gt;)
 
-3. [snow*](\<https://www.avalabs.org/whitepapers\>) The Snow family of
+3. [snow*](&lt;https://www.avalabs.org/whitepapers&gt;) The Snow family of
    algorithms
    
-4. [Move](\<https://cloud.google.com/composer/docs/how-to/using/writing-dags\>)
+4. [Move](&lt;https://cloud.google.com/composer/docs/how-to/using/writing-dags&gt;)
     Move: a Language for Writing DAG Abstractions 
 
-5. [rdf](\<http://www.w3.org/1999/02/22-rdf-syntax-ns#\>)
+5. [rdf](&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;)
 
-6. [rdfs](\<http://www.w3.org/2000/01/rdf-schema#\>)
+6. [rdfs](&lt;http://www.w3.org/2000/01/rdf-schema#&gt;)
 
-7. [xsd](\<http://www.w3.org/2001/XMLSchema#\>) 
+7. [xsd](&lt;http://www.w3.org/2001/XMLSchema#&gt;) 
 
-8. [n3-w3c-notes](\<https://www.w3.org/TeamSubmission/n3/\>)
+8. [n3-w3c-notes](&lt;https://www.w3.org/TeamSubmission/n3/&gt;)
 
-9. [ntp](\<https://www.ntp.org/downloads.html\>)
+9. [ntp](&lt;https://www.ntp.org/downloads.html&gt;)
 
 ## Normative References
 
-0. [Claro](\<https://rdf.logos.co/protocol/Claro/1/0/0/raw\>)
+0. [Claro](&lt;https://rdf.logos.co/protocol/Claro/1/0/0/raw&gt;)
 
-1. [n3](\<https://www.w3.org/DesignIssues/Notation3.html\>)
+1. [n3](&lt;https://www.w3.org/DesignIssues/Notation3.html&gt;)
 
-2. [json-ld](\<https://json-ld.org/\>)
+2. [json-ld](&lt;https://json-ld.org/&gt;)
 
 ## Copyright
 

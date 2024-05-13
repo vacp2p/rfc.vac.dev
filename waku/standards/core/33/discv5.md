@@ -2,11 +2,11 @@
 title: 33/WAKU2-DISCV5
 name: Waku v2 Discv5 Ambient Peer Discovery
 status: draft
-editor: Daniel Kaiser \<danielkaiser@status.im\>
+editor: Daniel Kaiser &lt;danielkaiser@status.im&gt;
 contributors:
 ---
 - Status: draft
-- Editor: Daniel Kaiser \<danielkaiser@status.im\>
+- Editor: Daniel Kaiser &lt;danielkaiser@status.im&gt;
 
 ## Abstract
 
@@ -89,31 +89,31 @@ to avoid cluttering peer lists with nodes that are not reachable.
 
 Ethereum discv5:
 
-\<pre\>
-\<code\>
+&lt;pre&gt;
+&lt;code&gt;
 header        = static-header || authdata
 static-header = protocol-id || version || flag || nonce || authdata-size
-protocol-id   = \<b\>"discv5"\</b\>
+protocol-id   = &lt;b&gt;"discv5"&lt;/b&gt;
 version       = 0x0001
 authdata-size = uint16    -- byte length of authdata
 flag          = uint8     -- packet type identifier
 nonce         = uint96    -- nonce of message
-\</code\>
-\</pre\>
+&lt;/code&gt;
+&lt;/pre&gt;
 
 `33/WAKU2-DISCV5`:
 
-\<pre\>
-kcode\>
+&lt;pre&gt;
+kcode&gt;
 header        = static-header || authdata
 static-header = protocol-id || version || flag || nonce || authdata-size
-protocol-id   = \<b\>"d5waku"\</b\>
+protocol-id   = &lt;b&gt;"d5waku"&lt;/b&gt;
 version       = 0x0001
 authdata-size = uint16    -- byte length of authdata
 flag          = uint8     -- packet type identifier
 nonce         = uint96    -- nonce of message
-\</code\>
-\</pre\>
+&lt;/code&gt;
+&lt;/pre&gt;
 
 
 ## Suggestions for Implementations

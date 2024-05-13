@@ -2,11 +2,11 @@
 title: 29/WAKU2-CONFIG
 name: Waku v2 Client Parameter Configuration Recommendations
 status: draft
-editor: Hanno Cornelius \<hanno@status.im\>
+editor: Hanno Cornelius &lt;hanno@status.im&gt;
 contributors:
 ---
 - Status: draft
-- Editor: Hanno Cornelius \<hanno@status.im\>
+- Editor: Hanno Cornelius &lt;hanno@status.im&gt;
 
 `29/WAKU2-CONFIG` describes the RECOMMENDED values to assign to configurable parameters for Waku v2 clients.
 Since Waku v2 is built on [libp2p](https://github.com/libp2p/specs),

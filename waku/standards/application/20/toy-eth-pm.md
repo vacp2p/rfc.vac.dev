@@ -2,11 +2,11 @@
 title: 20/TOY-ETH-PM
 name: Toy Ethereum Private Message
 status: draft
-editor: Franck Royer \<franck@status.im\>
+editor: Franck Royer &lt;franck@status.im&gt;
 contributors:
 ---
 - Status: draft
-- Editor: Franck Royer \<franck@status.im\>
+- Editor: Franck Royer &lt;franck@status.im&gt;
 
 **Content Topics**:
 

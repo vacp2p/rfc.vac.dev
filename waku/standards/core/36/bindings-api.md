@@ -2,13 +2,14 @@
 title: 36/WAKU2-BINDINGS-API
 name: Waku v2 C Bindings API
 status: draft
-editor: Richard Ramos \<richard@status.im\>
+editor: Richard Ramos &lt;richard@status.im&gt;
 contributors:
-- Franck Royer \<franck@status.im\>
+- Franck Royer &lt;franck@status.im&gt;
 ---
 - Status: draft
-- Editor: Richard Ramos \<richard@status.im\>
-- Contributors::
+- Editor: Richard Ramos &lt;richard@status.im&gt;
+- Contributors:
+  - Franck Royer &lt;franck@status.im&gt;
   
 
 # Introduction
@@ -273,12 +274,12 @@ interface JsonConfig {
     nodeKey?: string;
     keepAliveInterval?: number;
     relay?: boolean;
-    relayTopics?: Array\<string\>;
+    relayTopics?: Array<string>;
     gossipsubParameters?: GossipSubParameters;
     minPeersToPublish?: number
     legacyFilter?: boolean;
     discV5?: boolean;
-    discV5BootstrapNodes?: Array\<string\>;
+    discV5BootstrapNodes?: Array<string>;
     discV5UDPPort?: number;
     store?: boolean;
     databaseURL?: string;

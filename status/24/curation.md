@@ -3,10 +3,10 @@ title: 24/STATUS-CURATION
 name: Status Community Directory Curation Voting using Waku v2
 status: draft
 description: A voting protocol for SNT holders to submit votes to a smart contract. Voting is immutable, which helps avoid sabotage from malicious peers.
-editor: Szymon Szlachtowicz \<szymon.s@ethworks.io\>
+editor: Szymon Szlachtowicz &lt;szymon.s@ethworks.io&gt;
 ---
 - Status: draft
-- Editor: Szymon Szlachtowicz \<szymon.s@ethworks.io\>
+- Editor: Szymon Szlachtowicz &lt;szymon.s@ethworks.io&gt;
 
 ## Abstract
 This specification is a voting protocol for peers to submit votes to a smart contract. Voting is immutable, 

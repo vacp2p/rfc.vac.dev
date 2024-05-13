@@ -4,15 +4,16 @@ name: Status Keycard Usage
 status: draft
 category: Standards Track
 description: Describes how an application can use the Status Keycard to create, store and transact with different account addresses.
-editor: Aaryamann Challani \<aaryamann@status.im\>
+editor: Aaryamann Challani &lt;aaryamann@status.im&gt;
 contributors:
-  - Jimmy Debe \<jimmy@status.im\>
+  - Jimmy Debe &lt;jimmy@status.im&gt;
 ---
 - Status: draft
 - Category: Standards Track
-- Editor: Aaryamann Challani \<aaryamann@status.im\>
-- Contributors::
-  - Jimmy Debe \<jimmy@status.im\>
+- Editor: Aaryamann Challani &lt;aaryamann@status.im&gt;
+- Contributors:
+  - Jimmy Debe &lt;jimmy@status.im&gt;
+  
 
 ## Terminology
 
@@ -74,7 +75,7 @@ To fetch if the keycard is ready to be used by the application.
 The requester MAY add a `pairing` field to filter through the generated keys
 ```json
 {
-  "pairing": \<shared_secret\>/\<pairing_index\>/\<256_bit_salt\> OR null
+  "pairing": <shared_secret>/<pairing_index>/<256_bit_salt> OR null
 }
 ```
 
@@ -118,7 +119,7 @@ To establish a secure communication channel described [here](https://keycard.tec
 #### Response wire format
 
 ```json
-"\<shared_secret\>/\<pairing_index\>/\<256_bit_salt\>"
+"<shared_secret>/<pairing_index>/<256_bit_salt>"
 ```
 
 ### 4. Generate a new set of keys (`/generate-and-load-keys`)
@@ -130,7 +131,7 @@ To generate a new set of keys and load them onto the keycard.
 ```json
 {
   "mnemonic": 12_word_mnemonic,
-  "pairing": \<shared_secret\>/\<pairing_index\>/\<256_bit_salt\>,
+  "pairing": <shared_secret>/<pairing_index>/<256_bit_salt>,
   "pin": 6_digit_pin
 }
 ```
@@ -162,7 +163,7 @@ To fetch the keys that are currently loaded on the keycard.
 
 ```json
 {
-  "pairing": \<shared_secret\>/\<pairing_index\>/\<256_bit_salt\>,
+  "pairing": <shared_secret>/<pairing_index>/<256_bit_salt>,
   "pin": 6_digit_pin
 }
 ```
@@ -195,7 +196,7 @@ To sign a transaction using the keycard, passing in the pairing information and 
 ```json
 {
   "hash": 64_byte_hash_of_the_transaction,
-  "pairing": \<shared_secret\>/\<pairing_index\>/\<256_bit_salt\>,
+  "pairing": <shared_secret>/<pairing_index>/<256_bit_salt>,
   "pin": 6_digit_pin,
   "path": bip32_path_to_the_key
 }
@@ -204,7 +205,7 @@ To sign a transaction using the keycard, passing in the pairing information and 
 #### Response wire format
 
 ```json
-\<256_bit_signature\>
+<256_bit_signature>
 ```
 
 ### 7. Export a key (`/export-key`)
@@ -215,7 +216,7 @@ To export a key from the keycard, passing in the pairing information and the pat
 
 ```json
 {
-  "pairing": \<shared_secret\>/\<pairing_index\>/\<256_bit_salt\>,
+  "pairing": <shared_secret>/<pairing_index>/<256_bit_salt>,
   "pin": 6_digit_pin,
   "path": bip32_path_to_the_key
 }
@@ -224,7 +225,7 @@ To export a key from the keycard, passing in the pairing information and the pat
 #### Response wire format
 
 ```json
-\<256_bit_public_key\>
+<256_bit_public_key>
 ``` 
 
 ### 8. Verify a pin (`/verify-pin`)
@@ -262,7 +263,7 @@ To change the pin of the keycard.
 {
   "new-pin": 6_digit_new_pin,
   "current-pin": 6_digit_new_pin,
-  "pairing": \<shared_secret\>/\<pairing_index\>/\<256_bit_salt\>
+  "pairing": <shared_secret>/<pairing_index>/<256_bit_salt>
 }
 ```
 
@@ -290,7 +291,7 @@ If the Keycard is blocked due to too many incorrect pin attempts, it can be unbl
 {
   "puk": 12_digit_recovery_code,
   "new-pin": 6_digit_new_pin,
-  "pairing": \<shared_secret\>/\<pairing_index\>/\<256_bit_salt\>
+  "pairing": <shared_secret>/<pairing_index>/<256_bit_salt>
 }
 ```
 

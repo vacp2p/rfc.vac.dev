@@ -2,11 +2,11 @@
 title: 18/WAKU2-SWAP
 name: Waku SWAP Accounting
 status: deprecated
-editor: Oskar Thorén \<oskarth@titanproxy.com\>
-contributor: Ebube Ud \<ebube@status.im\>
+editor: Oskar Thorén &lt;oskarth@titanproxy.com&gt;
+contributor: Ebube Ud &lt;ebube@status.im&gt;
 ---
 - Status: deprecated
-- Editor: Oskar Thorén \<oskarth@titanproxy.com\>
+- Editor: Oskar Thorén &lt;oskarth@titanproxy.com&gt;
 
 ## Abstract
 
@@ -24,7 +24,7 @@ Theoretically, nodes providing and using resources over a long, indefinite, peri
 
 ## Game Theory - Iterated prisoner's dilemma / donation game
 
-What follows is a sketch of what the game looks like between two nodes. We can look at it as a special case of iterated prisoner's dilemma called a [Donation game](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma#Special_case:_donation_game) where each node can cooperate with some benefit `b` at a personal cost `c`, where `b\>c`.
+What follows is a sketch of what the game looks like between two nodes. We can look at it as a special case of iterated prisoner's dilemma called a [Donation game](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma#Special_case:_donation_game) where each node can cooperate with some benefit `b` at a personal cost `c`, where `b>c`.
 
 From A's point of view:
 
@@ -46,10 +46,10 @@ With R=reward, S=Sucker's payoff, T=temptation, P=punishment
 
 And the following holds:
 
-- `T\>R\>P\>S`
-- `2R\>T+S`
+- `T>R>P>S`
+- `2R>T+S`
 
-In our case, this means `b\>b-c\>0\>-c` and `2(b-c)\> b-c` which is trivially true.
+In our case, this means `b>b-c>0>-c` and `2(b-c)> b-c` which is trivially true.
 
 As this is an iterated game with no clear finishing point in most circumstances, a tit-for-tat strategy is simple, elegant and functional. To be more theoretically precise, this also requires reasonable assumptions on error rate and discount parameter. This captures notions such as "does the perceived action reflect the intended action" and "how much do you value future (uncertain) actions compared to previous actions". See [Axelrod - Evolution of Cooperation (book)](https://en.wikipedia.org/wiki/The_Evolution_of_Cooperation) for more details. In specific circumstances, nodes can choose slightly different policies if there's a strong need for it. A policy is simply how a node chooses to act given a set of circumstances.
 

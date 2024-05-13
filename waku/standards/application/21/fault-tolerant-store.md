@@ -2,11 +2,11 @@
 title: 21/WAKU2-FAULT-TOLERANT-STORE
 name: Waku v2 Fault-Tolerant Store
 status: draft
-editor: Sanaz Taheri \<sanaz@status.im\>
+editor: Sanaz Taheri &lt;sanaz@status.im&gt;
 contributors:
 ---
 - Status: draft
-- Editor: Sanaz Taheri \<sanaz@status.im\>
+- Editor: Sanaz Taheri &lt;sanaz@status.im&gt;
 
  The reliability of [13/WAKU2-STORE](../../core/13/store) protocol heavily relies on the fact that full nodes i.e., those who persist messages have high availability and uptime and do not miss any messages. 
  If a node goes offline, then it will risk missing all the messages transmitted in the network during that time. 

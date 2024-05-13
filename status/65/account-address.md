@@ -4,16 +4,19 @@ name: Status Account Address
 status: draft
 category: Standards Track
 description: Details of what a Status account address is and how account addresses are created and used.
-editor: Aaryamann Challani \<aaryamann@status.im\>
+editor: Aaryamann Challani &lt;aaryamann@status.im&gt;
 contributors:
-- Corey Petty \<corey@status.im\>
-- Oskar Thorén \<oskarth@titanproxy.com\>
-- Samuel Hawksby-Robinson \<samuel@status.im\>
+- Corey Petty &lt;corey@status.im&gt;
+- Oskar Thorén &lt;oskarth@titanproxy.com&gt;
+- Samuel Hawksby-Robinson &lt;samuel@status.im&gt;
 ---
 - Status: draft
 - Category: Standards Track
-- Editor: Aaryamann Challani \<aaryamann@status.im\>
-- Contributors::
+- Editor: Aaryamann Challani &lt;aaryamann@status.im&gt;
+- Contributors:
+  - Corey Petty &lt;corey@status.im&gt;
+  - Oskar Thorén &lt;oskarth@titanproxy.com&gt;
+  - Samuel Hawksby-Robinson &lt;samuel@status.im&gt;
   
 
 ## Abstract

@@ -2,16 +2,17 @@
 title: 2/MVDS
 name: Minimum Viable Data Synchronization
 status: stable
-editor: Sanaz Taheri \<sanaz@status.im\>
+editor: Sanaz Taheri &lt;sanaz@status.im&gt;
 contributors:
-  - Dean Eigenmann \<dean@status.im\>
-  - Oskar Thorén \<oskarth@titanproxy.com\>
+  - Dean Eigenmann &lt;dean@status.im&gt;
+  - Oskar Thorén &lt;oskarth@titanproxy.com&gt;
 ---
 - Status: stable
-- Editor: Sanaz Taheri \<sanaz@status.im\>
-- Contributors::
-  - Dean Eigenmann \<dean@status.im\>
-  - Oskar Thorén \<oskarth@titanproxy.com\>
+- Editor: Sanaz Taheri &lt;sanaz@status.im&gt;
+- Contributors:
+  - Dean Eigenmann &lt;dean@status.im&gt;
+  - Oskar Thorén &lt;oskarth@titanproxy.com&gt;
+  
 
 In this specification, we describe a minimum viable protocol for data synchronization inspired by the Bramble Synchronization Protocol[^1]. This protocol is designed to ensure reliable messaging between peers across an unreliable peer-to-peer (P2P) network where they may be unreachable or unresponsive.
 
@@ -89,7 +90,7 @@ A maximum of one payload SHOULD be sent to peers per epoch, this payload contain
 
 Nodes MAY have two modes with which they can send records: `BATCH` and `INTERACTIVE` mode. The following rules dictate how nodes construct payloads every epoch for any given peer for both modes.
 
-\> ***NOTE:** A node may send messages both in interactive and in batch mode.*
+&gt; ***NOTE:** A node may send messages both in interactive and in batch mode.*
 
 #### Interactive Mode
 
@@ -100,11 +101,11 @@ Nodes MAY have two modes with which they can send records: `BATCH` and `INTERACT
  - When a node receives an `ACK`, the `MESSAGE` is removed from the state for the given peer.
  - All records that require retransmission are added to the payload, given `Send Epoch` has been reached.
 
-\<p align="center"\>
-    \<img src="../assets/mvds/interactive.png" /\>
-    \<br /\>
+&lt;p align="center"&gt;
+    &lt;img src="../assets/mvds/interactive.png" /&gt;
+    &lt;br /&gt;
     Figure 1: Delivery without retransmissions in interactive mode.
-\</p\>
+&lt;/p&gt;
 
 #### Batch Mode
 
@@ -117,14 +118,14 @@ Nodes MAY have two modes with which they can send records: `BATCH` and `INTERACT
 <!-- diagram -->
 
 
-\<p align="center"\>
-    \<img src="../assets/mvds/batch.png" /\>
-    \<br /\>
+&lt;p align="center"&gt;
+    &lt;img src="../assets/mvds/batch.png" /&gt;
+    &lt;br /&gt;
     Figure 2: Delivery without retransmissions in batch mode.
-\</p\>
+&lt;/p&gt;
 
 
-\> ***NOTE:** Batch mode is higher bandwidth whereas interactive mode is higher latency.*
+&gt; ***NOTE:** Batch mode is higher bandwidth whereas interactive mode is higher latency.*
 
 
 <!-- Interactions with state, flow chart with retransmissions? -->
@@ -136,11 +137,11 @@ The record of the type `Type` SHOULD be retransmitted every time `Send Epoch` is
 
 `Send Epoch` and `Send Count` MUST be increased every time a record is retransmitted. Although no function is defined on how to increase `Send Epoch`, it SHOULD be exponentially increased until reaching an upper bound where it then goes back to a lower epoch in order to prevent a record's `Send Epoch`'s from becoming too large.
 
-\> ***NOTE:** We do not retransmission `ACK`s as we do not know when they have arrived, therefore we simply resend them every time we receive a `MESSAGE`.*
+&gt; ***NOTE:** We do not retransmission `ACK`s as we do not know when they have arrived, therefore we simply resend them every time we receive a `MESSAGE`.*
 
 ## Formal Specification
 
-MVDS has been formally specified using TLA+: \<https://github.com/vacp2p/formalities/tree/master/MVDS\>.
+MVDS has been formally specified using TLA+: &lt;https://github.com/vacp2p/formalities/tree/master/MVDS&gt;.
 
 ## Acknowledgments
  - Preston van Loon
@@ -155,4 +156,4 @@ Copyright and related rights waived via [CC0](https://creativecommons.org/public
 ## Footnotes
 
 [^1]: akwizgran et al. [BSP](https://code.briarproject.org/briar/briar-spec/blob/master/protocols/BSP). Briar.
-[^2]: \<https://github.com/vacp2p/mvds\>
+[^2]: &lt;https://github.com/vacp2p/mvds&gt;

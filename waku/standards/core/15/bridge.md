@@ -2,10 +2,10 @@
 title: 15/WAKU-BRIDGE
 name: Waku Bridge
 status: draft
-editor: Hanno Cornelius \<hanno@status.im\>
+editor: Hanno Cornelius &lt;hanno@status.im&gt;
 ---
 - Status: draft
-- Editor: Hanno Cornelius \<hanno@status.im\>
+- Editor: Hanno Cornelius &lt;hanno@status.im&gt;
 
 A bridge between Waku v1 and Waku v2.
 

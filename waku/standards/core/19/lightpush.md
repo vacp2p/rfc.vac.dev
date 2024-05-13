@@ -2,16 +2,17 @@
 title: 19/WAKU2-LIGHTPUSH
 name: Waku v2 Light Push
 status: draft
-editor: Hanno Cornelius \<hanno@status.im\> 
+editor: Hanno Cornelius &lt;hanno@status.im&gt; 
 contributors: 
-  - Daniel Kaiser \<danielkaiser@status.im\>
-  - Oskar Thorén \<oskarth@titanproxy.com\>
+  - Daniel Kaiser &lt;danielkaiser@status.im&gt;
+  - Oskar Thorén &lt;oskarth@titanproxy.com&gt;
 ---
 - Status: draft
-- Editor: Hanno Cornelius \<hanno@status.im\>
-- Contributors::
-  - Daniel Kaiser \<danielkaiser@status.im\>
-  - Oskar Thorén \<oskarth@titanproxy.com\>
+- Editor: Hanno Cornelius &lt;hanno@status.im&gt;
+- Contributors:
+  - Daniel Kaiser &lt;danielkaiser@status.im&gt;
+  - Oskar Thorén &lt;oskarth@titanproxy.com&gt;
+  
 
 **Protocol identifier**: `/vac/waku/lightpush/2.0.0-beta1`
 

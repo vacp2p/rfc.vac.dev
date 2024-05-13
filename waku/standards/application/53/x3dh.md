@@ -3,18 +3,23 @@ title: 53/WAKU2-X3DH
 name: X3DH usage for Waku payload encryption
 status: draft
 category: Standards Track
-editor: Aaryamann Challani \<aaryamann@status.im\>
+editor: Aaryamann Challani &lt;aaryamann@status.im&gt;
 contributors:
-- Andrea Piana \<andreap@status.im\>
-- Pedro Pombeiro \<pedro@status.im\>
-- Corey Petty \<corey@status.im\>
-- Oskar Thorén \<oskarth@titanproxy.com\>
-- Dean Eigenmann \<dean@status.im\>
+- Andrea Piana &lt;andreap@status.im&gt;
+- Pedro Pombeiro &lt;pedro@status.im&gt;
+- Corey Petty &lt;corey@status.im&gt;
+- Oskar Thorén &lt;oskarth@titanproxy.com&gt;
+- Dean Eigenmann &lt;dean@status.im&gt;
 ---
 - Status: draft
 - Category: Standards Track
-- Editor: Aaryamann Challani \<aaryamann@status.im\>
-- Contributors::
+- Editor: Aaryamann Challani &lt;aaryamann@status.im&gt;
+- Contributors:
+  - Andrea Piana &lt;andreap@status.im&gt;
+  - Pedro Pombeiro &lt;pedro@status.im&gt;
+  - Corey Petty &lt;corey@status.im&gt;
+  - Oskar Thorén &lt;oskarth@titanproxy.com&gt;
+  - Dean Eigenmann &lt;dean@status.im&gt;
   
 
 ## Abstract
@@ -130,7 +135,7 @@ message Bundle {
   // Identity key 'IK_B'
   bytes identity = 1;
   // Signed prekey 'SPK_B' for each device, indexed by 'installation-id'
-  map\<string,SignedPreKey\> signed_pre_keys = 2;
+  map<string,SignedPreKey> signed_pre_keys = 2;
   // Prekey signature 'Sig(IK_B, Encode(SPK_B))'
   bytes signature = 4;
   // When the bundle was created locally
@@ -166,7 +171,7 @@ message ProtocolMessage {
   // A sequence of bundles
   repeated Bundle bundles = 3;
   // One to one message, encrypted, indexed by installation_id
-  map\<string,DirectMessageProtocol\> direct_message = 101;
+  map<string,DirectMessageProtocol> direct_message = 101;
   // Public message, not encrypted
   bytes public_message = 102;
 }

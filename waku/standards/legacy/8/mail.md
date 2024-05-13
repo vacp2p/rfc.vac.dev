@@ -2,18 +2,19 @@
 title: 8/WAKU-MAIL
 name: Waku Mailserver
 status: stable
-editor: Andrea Maria Piana \<andreap@status.im\>
+editor: Andrea Maria Piana &lt;andreap@status.im&gt;
 contributors:
-  - Adam Babik \<adam@status.im\>
-  - Dean Eigenmann \<dean@status.im\>
-  - Oskar Thorén \<oskarth@titanproxy.com\>
+  - Adam Babik &lt;adam@status.im&gt;
+  - Dean Eigenmann &lt;dean@status.im&gt;
+  - Oskar Thorén &lt;oskarth@titanproxy.com&gt;
 ---
 - Status: stable
-- Editor: Andrea Maria Piana \<andreap@status.im\>
-- Contributors::
-  - Adam Babik \<adam@status.im\>
-  - Dean Eigenmann \<dean@status.im\>
-  - Oskar Thorén \<oskarth@titanproxy.com\>
+- Editor: Andrea Maria Piana &lt;andreap@status.im&gt;
+- Contributors:
+  - Adam Babik &lt;adam@status.im&gt;
+  - Dean Eigenmann &lt;dean@status.im&gt;
+  - Oskar Thorén &lt;oskarth@titanproxy.com&gt;
+  
 
 ## Abstract
 

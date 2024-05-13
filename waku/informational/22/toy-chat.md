@@ -2,13 +2,14 @@
 title: 22/TOY-CHAT
 name: Waku v2 Toy Chat
 status: draft
-editor: Franck Royer \<franck@status.im\>
+editor: Franck Royer &lt;franck@status.im&gt;
 contributors:
-   - Hanno Cornelius \<hanno@status.im\>
+   - Hanno Cornelius &lt;hanno@status.im&gt;
 ---
 - Status: draft
-- Editor: Franck Royer \<franck@status.im\>
-- Contributors::
+- Editor: Franck Royer &lt;franck@status.im&gt;
+- Contributors:
+  - Hanno Cornelius &lt;hanno@status.im&gt;
   
 
 **Content Topic**: `/toy-chat/2/huilong/proto`.

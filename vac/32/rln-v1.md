@@ -2,17 +2,22 @@
 title: 32/RLN-V1
 name: Rate Limit Nullifier
 status: raw
-editor: Rasul Ibragimov \<curryrasul@gmail.com\>
+editor: Rasul Ibragimov &lt;curryrasul@gmail.com&gt;
 contributors:
-- Barry Whitehat \<barrywhitehat@protonmail.com\>
-- Sanaz Taheri \<sanaz@status.im\>
-- Oskar Thorén \<oskarth@titanproxy.com\>
-- Onur Kilic \<onurkilic1004@gmail.com\>
-- Blagoj Dimovski \<blagoj.dimovski@yandex.com\>
+- Barry Whitehat &lt;barrywhitehat@protonmail.com&gt;
+- Sanaz Taheri &lt;sanaz@status.im&gt;
+- Oskar Thorén &lt;oskarth@titanproxy.com&gt;
+- Onur Kilic &lt;onurkilic1004@gmail.com&gt;
+- Blagoj Dimovski &lt;blagoj.dimovski@yandex.com&gt;
 ---
 - Status: raw
-- Editor: Rasul Ibragimov \<curryrasul@gmail.com\>
-- Contributors::
+- Editor: Rasul Ibragimov &lt;curryrasul@gmail.com&gt;
+- Contributors:
+  - Barry Whitehat &lt;barrywhitehat@protonmail.com&gt;
+  - Sanaz Taheri &lt;sanaz@status.im&gt;
+  - Oskar Thorén &lt;oskarth@titanproxy.com&gt;
+  - Onur Kilic &lt;onurkilic1004@gmail.com&gt;
+  - Blagoj Dimovski &lt;blagoj.dimovski@yandex.com&gt;
   
 
 ## Abstract
@@ -578,7 +583,7 @@ let mut rln = RLN::new(tree_height, resources);
 
 ```rust
 // We generate an identity tuple
-let mut buffer = Cursor::new(Vec::\<u8\>::new());
+let mut buffer = Cursor::new(Vec::<u8>::new());
 rln.extended_key_gen(&mut buffer).unwrap();
 // We deserialize the keygen output to obtain
 // the identiy_secret and id_commitment
@@ -612,7 +617,7 @@ let signal = b"RLN is awesome";
 let proof_input = prepare_prove_input(identity_secret, id_index, epoch, signal);
 // We generate a RLN proof for proof_input
 let mut in_buffer = Cursor::new(proof_input);
-let mut out_buffer = Cursor::new(Vec::\<u8\>::new());
+let mut out_buffer = Cursor::new(Vec::<u8>::new());
 rln.generate_rln_proof(&mut in_buffer, &mut out_buffer)
     .unwrap();
 // We get the public outputs returned by the circuit evaluation

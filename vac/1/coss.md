@@ -3,25 +3,26 @@ title: 1/COSS
 name: Consensus-Oriented Specification System
 status: draft
 category: Best Current Practice
-editor: Oskar Thoren \<oskarth@titanproxy.com\>
+editor: Oskar Thoren &lt;oskarth@titanproxy.com&gt;
 contributors:
-  - Pieter Hintjens \<ph@imatix.com\>
-  - André Rebentisch \<andre@openstandards.de\>
-  - Alberto Barrionuevo \<abarrio@opentia.es\>
-  - Chris Puttick \<chris.puttick@thehumanjourney.net\>
-  - Yurii Rashkovskii \<yrashk@gmail.com\>
-  - Daniel Kaiser \<danielkaiser@status.im\>
+  - Pieter Hintjens &lt;ph@imatix.com&gt;
+  - André Rebentisch &lt;andre@openstandards.de&gt;
+  - Alberto Barrionuevo &lt;abarrio@opentia.es&gt;
+  - Chris Puttick &lt;chris.puttick@thehumanjourney.net&gt;
+  - Yurii Rashkovskii &lt;yrashk@gmail.com&gt;
+  - Daniel Kaiser &lt;danielkaiser@status.im&gt;
 ---
 - Status: draft
 - Category: Best Current Practice
-- Editor: Oskar Thoren \<oskarth@titanproxy.com\>
-- Contributors::
-  - Pieter Hintjens \<ph@imatix.com\>
-  - André Rebentisch \<andre@openstandards.de\>
-  - Alberto Barrionuevo \<abarrio@opentia.es\>
-  - Chris Puttick \<chris.puttick@thehumanjourney.net\>
-  - Yurii Rashkovskii \<yrashk@gmail.com\>
-  - Daniel Kaiser \<danielkaiser@status.im\>
+- Editor: Oskar Thoren &lt;oskarth@titanproxy.com&gt;
+- Contributors:
+  - Pieter Hintjens &lt;ph@imatix.com&gt;
+  - André Rebentisch &lt;andre@openstandards.de&gt;
+  - Alberto Barrionuevo &lt;abarrio@opentia.es&gt;
+  - Chris Puttick &lt;chris.puttick@thehumanjourney.net&gt;
+  - Yurii Rashkovskii &lt;yrashk@gmail.com&gt;
+  - Daniel Kaiser &lt;danielkaiser@status.im&gt;
+  
 
 This document describes a consensus-oriented specification system (COSS) for building interoperable technical specifications.
 COSS is based on a lightweight editorial process that seeks to engage the widest possible range of interested parties and move rapidly to consensus through working code.
@@ -100,7 +101,7 @@ Thus, we refer to a specification by specifying its domain, number, and short na
 New versions of the same specification will have new numbers.
 The syntax for a specification reference is:
 
-    \<domain\>/spec/\<number\>/\<shortname\>
+    &lt;domain&gt;/spec/&lt;number&gt;/&lt;shortname&gt;
 
 For example, this specification is **rfc.vac.dev/spec/1/COSS**.
 The short form **1/COSS** may be used when referring to the specification from other specifications in the same domain.
@@ -209,8 +210,8 @@ This will enable programmatic access to specification metadata.
 | **status**       | status               | string | draft                                                                                                                                                                                                                               |
 | **category**     | category             | string | Best Current Practice                                                                                                                                                                                                                            |
 | **tags**         | 0 or several tags    | list   | waku-application, waku-core-protocol                                                                                                                                                                                                |
-| **editor**       | editor name/email    | string | Oskar Thoren \<oskarth@titanproxy.com\>                                                                                                                                                                                                      |
-| **contributors** | contributors         | list   | - Pieter Hintjens \<ph@imatix.com\>\<br/\> - André Rebentisch \<andre@openstandards.de\>\<br/\> - Alberto Barrionuevo \<abarrio@opentia.es\>\<br/\> - Chris Puttick \<chris.puttick@thehumanjourney.net\>\<br/\> - Yurii Rashkovskii \<yrashk@gmail.com\> |
+| **editor**       | editor name/email    | string | Oskar Thoren &lt;oskarth@titanproxy.com&gt;                                                                                                                                                                                                      |
+| **contributors** | contributors         | list   | - Pieter Hintjens &lt;ph@imatix.com&gt;&lt;br/&gt; - André Rebentisch &lt;andre@openstandards.de&gt;&lt;br/&gt; - Alberto Barrionuevo &lt;abarrio@opentia.es&gt;&lt;br/&gt; - Chris Puttick &lt;chris.puttick@thehumanjourney.net&gt;&lt;br/&gt; - Yurii Rashkovskii &lt;yrashk@gmail.com&gt; |
 
 ### Specification Template
 
