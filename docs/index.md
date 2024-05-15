@@ -4,9 +4,9 @@ title: Vac RFCs
 description: Codex is building a decentralised durability storage engine
 ---
 
-- [Status](/status)
-
 - [Vac](/vac)
+
+- [Status](/status)
 
 - [Waku](/waku)
 
