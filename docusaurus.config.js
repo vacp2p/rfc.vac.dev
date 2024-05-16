@@ -1,7 +1,9 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 require('dotenv').config()
-const { sidebarItemsGenerator } = require("./docusaurus-utils/sidebar/generator")
+const {
+  sidebarItemsGenerator,
+} = require('./docusaurus-utils/sidebar/generator')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -91,6 +93,7 @@ const config = {
           },
         },
         docs: {
+          id: 'root-pages',
           routeBasePath: '/',
         },
         og: {},
@@ -145,6 +148,14 @@ const config = {
               {
                 href: '/terms',
                 label: 'Terms & conditions',
+              },
+              {
+                href: '/privacy-policy',
+                label: 'Privacy Policy',
+              },
+              {
+                href: '/security',
+                label: 'Security',
               },
             ],
           },
