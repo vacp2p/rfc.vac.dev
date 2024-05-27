@@ -5,14 +5,15 @@ name: Status Simple Scaling
 status: raw
 category: Informational
 description: Describes how to scale Status Communities and Status 1-to-1 chats using Waku v2 protocol and components.
-editor: Daniel Kaiser \<danielkaiser@status.im\>
+editor: Daniel Kaiser &lt;danielkaiser@status.im&gt;
 contributors:
-- Alvaro Revuelta \<alrevuelta@status.im\>
+- Alvaro Revuelta &lt;alrevuelta@status.im&gt;
 ---
 - Status: raw
 - Category: Informational
-- Editor: Daniel Kaiser \<danielkaiser@status.im\>
-- Contributors::
+- Editor: Daniel Kaiser &lt;danielkaiser@status.im&gt;
+- Contributors:
+  - Alvaro Revuelta &lt;alrevuelta@status.im&gt;
   
 
 ## Abstract
@@ -21,7 +22,7 @@ This document describes how to scale [56/STATUS-COMMUNITIES](../56/communities) 
 using Waku v2 protocol and components.
 It also adds a few new aspects, where more sophisticated components are not yet researched and evaluated.
 
-\> *Note:* (Parts of) this RFC will be deprecated in the future as we continue research to scale specific components
+&gt; *Note:* (Parts of) this RFC will be deprecated in the future as we continue research to scale specific components
 in a way that aligns better with our principles of decentralization and protecting anonymity.
 This document informs about scaling at the current stage of research and shows it is practically possible.
 Practical feasibility is also a core goal for us.
@@ -44,7 +45,7 @@ This document focuses on the second scaling dimension.
 With the scaling solutions discussed in this document,
 each content topics can have a large set of active users, but still has to fit in a single pubsub mesh.
 
-\> *Note:* While it is possible to use the same content topic name on several shards,
+&gt; *Note:* While it is possible to use the same content topic name on several shards,
 each node that is interested in this content topic has to be subscribed to all respective shards, which does not scale.
 Splitting content topics in a more sophisticated and efficient way will be part of a future document.
 
@@ -75,7 +76,7 @@ The 1024 shards within the main Status shard cluster are allocated as follows.
 
 Shard indices are mapped to pubsub topic names as follows (specified in [WAKU2-RELAY-SHARDING](https://github.com/waku-org/specs/blob/waku-RFC/standards/core/relay-sharding)).
 
-`/waku/2/rs/\<cluster_id\>/\<shard_number\>`
+`/waku/2/rs/<cluster_id>/<shard_number>`
 
 an example for the shard with index `18` in the Status shard cluster:
 
@@ -114,17 +115,17 @@ message CommunityDescription {
   // The Lamport timestamp of the message
   uint64 clock = 1;
   // A mapping of members in the community to their roles
-  map\<string,CommunityMember\> members = 2;
+  map<string,CommunityMember> members = 2;
   // The permissions of the Community
   CommunityPermissions permissions = 3;
   // The metadata of the Community
   ChatIdentity identity = 5;
   // A mapping of chats to their details
-  map\<string,CommunityChat\> chats = 6;
+  map<string,CommunityChat> chats = 6;
   // A list of banned members
   repeated string ban_list = 7;
   // A mapping of categories to their details
-  map\<string,CommunityCategory\> categories = 8;
+  map<string,CommunityCategory> categories = 8;
   // The admin settings of the Community
   CommunityAdminSettings admin_settings = 10;
   // If the community is encrypted
@@ -136,12 +137,12 @@ message CommunityDescription {
 }
 ```
 
-\> *Note*: Currently, Status app has allocated shared cluster `16` in [52/WAKU2-RELAY-STATIC-SHARD-ALLOC](https://github.com/waku-org/specs/blob/waku-RFC/informational/relay-static-shard-alloc).
+&gt; *Note*: Currently, Status app has allocated shared cluster `16` in [52/WAKU2-RELAY-STATIC-SHARD-ALLOC](https://github.com/waku-org/specs/blob/waku-RFC/informational/relay-static-shard-alloc).
 Status app could allocate more shard clusters, for instance to establish a test net.
 We could add the shard cluster index to the community description as well.
 The recommendation for now is to keep it as a configuration option of the Status app.
 
-\> *Note*: Once this RFC moves forward, the new community description protobuf fields should be mentioned in [56/STATUS-COMMUNITIES](../56/communities).
+&gt; *Note*: Once this RFC moves forward, the new community description protobuf fields should be mentioned in [56/STATUS-COMMUNITIES](../56/communities).
 
 Status communities can be mapped to shards in two ways: static, and owner-based.
 
@@ -154,7 +155,7 @@ The Status CC community uses index `16` (not to confuse with shard cluster index
 
 #### Owner Mapping
 
-\> *Note*: This way of mapping will be specified post-MVP.
+&gt; *Note*: This way of mapping will be specified post-MVP.
 
 Community owners can choose to map their communities to any shard within the index range `128 - 767`.
 
@@ -206,7 +207,7 @@ Recommendations on choosing this subset will be added in a future version of thi
 
 Desktop clients can choose to only use filter and lightpush.
 
-\> *Note*: Discussion: I'd suggest to set this as the default for the MVP.
+&gt; *Note*: Discussion: I'd suggest to set this as the default for the MVP.
 The load on infrastructure nodes would not be higher, because they have to receive and relay each message anyways.
 This comes as a trade-off to anonymity and decentralization,
 but can significantly improve scaling.
@@ -250,7 +251,7 @@ Large communities MAY choose to mainly rely on infrastructure nodes for *all* me
 Desktop clients of such communities should use light protocols as the default.
 Strong Desktop clients MAY opt in to support the relay network.
 
-\> *Note*: This is not planned for the MVP.
+&gt; *Note*: This is not planned for the MVP.
 
 ## Light Protocols
 
@@ -275,7 +276,7 @@ Nodes can request history messages via the [13/WAKU2-STORE](../../waku/standards
 The store service is not limited to a Status fleet.
 Anybody can run a Waku Archive node in the Status shards.
 
-\> *Note*: There is no specification for discovering archive nodes associated with specific shards yet.
+&gt; *Note*: There is no specification for discovering archive nodes associated with specific shards yet.
 Nodes expect archive nodes to store all messages, regardless of shard association.
 
 The recommendation for the allocation of archive nodes to shards is similar to the
@@ -293,7 +294,7 @@ To make nodes behind restrictive NATs discoverable,
 this document suggests using [libp2p rendezvous](https://github.com/libp2p/specs/blob/master/rendezvous/README).
 Nodes can check whether they are behind a restrictive NAT using the [libp2p AutoNAT protocol](https://github.com/libp2p/specs/blob/master/autonat/README).
 
-\> *Note:* The following will move into [WAKU2-RELAY-SHARDING](https://github.com/waku-org/specs/blob/waku-RFC/standards/core/relay-sharding), or [33/WAKU2-DISCV5](../../waku/standards/core/33/discv5):
+&gt; *Note:* The following will move into [WAKU2-RELAY-SHARDING](https://github.com/waku-org/specs/blob/waku-RFC/standards/core/relay-sharding), or [33/WAKU2-DISCV5](../../waku/standards/core/33/discv5):
 Nodes behind restrictive NATs SHOULD not announce their publicly unreachable address via [33/WAKU2-DISCV5](../../waku/standards/core/33/discv5) discovery.
 
 It is RECOMMENDED that nodes that are part of the relay network also act as rendezvous points.
@@ -332,11 +333,11 @@ REGISTER{my-app, {QmA, AddrA}}
 The app name, `my-app` contains the encoding of a single shard in string form:
 
 ```
-"rs/"| to_string(\<2-byte shard cluster index\>) | "/" | to_string(\<2-byte shard index\>)
+"rs/"| to_string(<2-byte shard cluster index>) | "/" | to_string(<2-byte shard index>)
 ```
 The string conversion SHOULD remove leading zeros.
 
-\> *Note:* Since the [ns](https://github.com/libp2p/specs/blob/master/rendezvous/README##protobuf) field is of type string,
+&gt; *Note:* Since the [ns](https://github.com/libp2p/specs/blob/master/rendezvous/README##protobuf) field is of type string,
 a more efficient byte encoding is not utilized.
 
 Registering shard 2 in the Status shard cluster (with shard cluster index 16, see [WAKU2-RELAY-STATIC-SHARD-ALLOC](https://github.com/waku-org/specs/blob/waku-RFC/informational/relay-static-shard-alloc),
@@ -404,7 +405,7 @@ For simplicity, there is just one key per topic. Since this approach has clear p
 Requirements on the gossipsub validator:
 * Relay nodes should use the existing gossipsub validators that allow to `Accept` or `Reject` messages, according to the following criteria:
 * If `timestamp` is not set (equals to 0) then `Reject` the message.
-* If the `timestamp` is `abs(current_timestamp-timestamp) \> MessageWindowInSec` then `Reject` the message.
+* If the `timestamp` is `abs(current_timestamp-timestamp) > MessageWindowInSec` then `Reject` the message.
 * If `meta` is empty, `Reject` the message.
 * If `meta` exists but its size is different than 64 bytes, `Reject` the message.
 * If `meta` does not successfully verifies according to the ECDSA signature verification algorithm using `public-key-topic` and `app-message-hash`, then `Reject` the message.

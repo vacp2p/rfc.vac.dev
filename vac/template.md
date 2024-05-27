@@ -3,12 +3,12 @@ title: XX/(WAKU2|LOGOS|CODEX|*)-TEMPLATE
 name: (Waku v2 | Logos | Codex) RFC Template
 status: (raw|draft|stable)
 category: (Standards Track|Informational|Best Current Practice)
-editor: Daniel Kaiser \<danielkaiser@status.im\>
+editor: Daniel Kaiser &lt;danielkaiser@status.im&gt;
 contributors:
 ---
 - Status: (raw|draft|stable)
 - Category: (Standards Track|Informational|Best Current Practice)
-- Editor: Daniel Kaiser \<danielkaiser@status.im\>
+- Editor: Daniel Kaiser &lt;danielkaiser@status.im&gt;
 
 # (Info, remove this section)
 

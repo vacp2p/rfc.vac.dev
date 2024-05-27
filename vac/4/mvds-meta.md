@@ -2,18 +2,19 @@
 title: 4/MVDS-META
 name: MVDS Metadata Field
 status: draft
-editor: Sanaz Taheri \<sanaz@status.im\>
+editor: Sanaz Taheri &lt;sanaz@status.im&gt;
 contributors:
-  - Dean Eigenmann \<dean@status.im\>
-  - Andrea Maria Piana \<andreap@status.im\>
-  - Oskar Thorén \<oskarth@titanproxy.com\>
+  - Dean Eigenmann &lt;dean@status.im&gt;
+  - Andrea Maria Piana &lt;andreap@status.im&gt;
+  - Oskar Thorén &lt;oskarth@titanproxy.com&gt;
 ---
 - Status: draft
-- Editor: Sanaz Taheri \<sanaz@status.im\>
-- Contributors::
-  - Dean Eigenmann \<dean@status.im\>
-  - Andrea Maria Piana \<andreap@status.im\>
-  - Oskar Thorén \<oskarth@titanproxy.com\>
+- Editor: Sanaz Taheri &lt;sanaz@status.im&gt;
+- Contributors:
+  - Dean Eigenmann &lt;dean@status.im&gt;
+  - Andrea Maria Piana &lt;andreap@status.im&gt;
+  - Oskar Thorén &lt;oskarth@titanproxy.com&gt;
+  
 
 In this specification, we describe a method to construct message history that will aid the consistency guarantees of [2/MVDS](../2/mvds). Additionally, we explain how data sync can be used for more lightweight messages that do not require full synchronization.
 
@@ -80,6 +81,6 @@ Copyright and related rights waived via [CC0](https://creativecommons.org/public
 
 ## Footnotes
 [^1]: [2/MVDS](../2/mvds)
-[^2]: \<https://en.wikipedia.org/wiki/Directed_acyclic_graph\>
+[^2]: &lt;https://en.wikipedia.org/wiki/Directed_acyclic_graph&gt;
 [^3]: Jepsen. [Causal Consistency](https://jepsen.io/consistency/models/causal). Jepsen, LLC.
-[^4]: \<https://en.wikipedia.org/wiki/Eventual_consistency\>
+[^4]: &lt;https://en.wikipedia.org/wiki/Eventual_consistency&gt;

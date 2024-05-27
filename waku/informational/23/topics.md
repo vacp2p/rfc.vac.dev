@@ -3,17 +3,18 @@ title: 23/WAKU2-TOPICS
 name: Waku v2 Topic Usage Recommendations
 status: draft
 category: Informational
-editor: Oskar Thoren \<oskarth@titanproxy.com\>
+editor: Oskar Thoren &lt;oskarth@titanproxy.com&gt;
 contributors:
-  - Hanno Cornelius \<hanno@status.im\>
-  - Daniel Kaiser \<danielkaiser@status.im\>
+  - Hanno Cornelius &lt;hanno@status.im&gt;
+  - Daniel Kaiser &lt;danielkaiser@status.im&gt;
 ---
 - Status: draft
 - Category: Informational
-- Editor: Oskar Thoren \<oskarth@titanproxy.com\>
-- Contributors::
-  - Hanno Cornelius \<hanno@status.im\>
-  - Daniel Kaiser \<danielkaiser@status.im\>
+- Editor: Oskar Thoren &lt;oskarth@titanproxy.com&gt;
+- Contributors:
+  - Hanno Cornelius &lt;hanno@status.im&gt;
+  - Daniel Kaiser &lt;danielkaiser@status.im&gt;
+  
 
 This document outlines recommended usage of topic names in Waku v2.
 In [10/WAKU2 spec](../../standards/core/10/waku2) there are two types of topics:
@@ -43,7 +44,7 @@ The first two parts indicate
 
 If applicable, it is RECOMMENDED to structure `{topic-name}` in a hierarchical way as well.
 
-\> *Note*: In previous versions of this document, the structure was `/waku/2/{topic-name}/{encoding}`.
+&gt; *Note*: In previous versions of this document, the structure was `/waku/2/{topic-name}/{encoding}`.
 The now deprecated `/{encoding}` was always set to `/proto`,
 which indicated that the [data field](../../standards/core/11/RELAY#protobuf-definition) in pubsub is serialized/encoded as protobuf.
 The inspiration for this format was taken from
@@ -141,10 +142,10 @@ For mapping Waku v1 topics to Waku v2 content topics,
 the following structure for the content topic SHOULD be used:
 
 ```
-/waku/1/\<4bytes-waku-v1-topic\>/rfc26
+/waku/1/<4bytes-waku-v1-topic>/rfc26
 ```
 
-The `\<4bytes-waku-v1-topic\>` SHOULD be the lowercase hex representation of the 4-byte Waku v1 topic.
+The `<4bytes-waku-v1-topic>` SHOULD be the lowercase hex representation of the 4-byte Waku v1 topic.
 A `0x` prefix SHOULD be used.
 `/rfc26` indicates that the bridged content is encoded according to RFC [26/WAKU2-PAYLOAD](../../standards/application/26/payload).
 See [15/WAKU-BRIDGE](../../standards/core/15/bridge) for a description of the bridged fields.

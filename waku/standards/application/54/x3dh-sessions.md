@@ -3,18 +3,23 @@ title: 54/WAKU2-X3DH-SESSIONS
 name: Session management for Waku X3DH 
 status: draft
 category: Standards Track
-editor: Aaryamann Challani \<aaryamann@status.im\>
+editor: Aaryamann Challani &lt;aaryamann@status.im&gt;
 contributors:
-- Andrea Piana \<andreap@status.im\>
-- Pedro Pombeiro \<pedro@status.im\>
-- Corey Petty \<corey@status.im\>
-- Oskar Thorén \<oskarth@titanproxy.com\>
-- Dean Eigenmann \<dean@status.im\>
+- Andrea Piana &lt;andreap@status.im&gt;
+- Pedro Pombeiro &lt;pedro@status.im&gt;
+- Corey Petty &lt;corey@status.im&gt;
+- Oskar Thorén &lt;oskarth@titanproxy.com&gt;
+- Dean Eigenmann &lt;dean@status.im&gt;
 ---
 - Status: draft
 - Category: Standards Track
-- Editor: Aaryamann Challani \<aaryamann@status.im\>
-- Contributors::
+- Editor: Aaryamann Challani &lt;aaryamann@status.im&gt;
+- Contributors:
+  - Andrea Piana &lt;andreap@status.im&gt;
+  - Pedro Pombeiro &lt;pedro@status.im&gt;
+  - Corey Petty &lt;corey@status.im&gt;
+  - Oskar Thorén &lt;oskarth@titanproxy.com&gt;
+  - Dean Eigenmann &lt;dean@status.im&gt;
   
 
 ## Abstract
@@ -51,12 +56,12 @@ partitionTopic := "contact-discovery-" + strconv.FormatInt(partition.Int64(), 10
 var hash []byte = keccak256(partitionTopic)
 var topicLen int = 4
 
-if len(hash) \< topicLen {
+if len(hash) < topicLen {
     topicLen = len(hash)
 }
 
 var contactCodeTopic [4]byte
-for i = 0; i \< topicLen; i++ {
+for i = 0; i < topicLen; i++ {
     contactCodeTopic[i] = hash[i]
 }
 ```
@@ -83,12 +88,12 @@ hexEncodedKey := hex.EncodeToString(sharedKey)
 var hash []byte = keccak256(hexEncodedKey)
 var topicLen int = 4
 
-if len(hash) \< topicLen {
+if len(hash) < topicLen {
     topicLen = len(hash)
 }
 
 var topic [4]byte
-for i = 0; i \< topicLen; i++ {
+for i = 0; i < topicLen; i++ {
     topic[i] = hash[i]
 }
 ```

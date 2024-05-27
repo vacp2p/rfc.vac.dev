@@ -4,17 +4,18 @@ name: Status Community History Service
 status: draft
 category: Standards Track
 description: Explains how new members of a Status community can request historical messages from archive nodes.
-editor: r4bbit \<r4bbit@status.im\>
+editor: r4bbit &lt;r4bbit@status.im&gt;
 contributors:
-  - Sanaz Taheri \<sanaz@status.im\>
-  - John Lea \<john@status.im\>
+  - Sanaz Taheri &lt;sanaz@status.im&gt;
+  - John Lea &lt;john@status.im&gt;
 ---
 - Status: draft
 - Category: Standards Track
-- Editor: r4bbit \<r4bbit@status.im\>
-- Contributors::
-  - Sanaz Taheri \<sanaz@status.im\>
-  - John Lea \<john@status.im\>
+- Editor: r4bbit &lt;r4bbit@status.im&gt;
+- Contributors:
+  - Sanaz Taheri &lt;sanaz@status.im&gt;
+  - John Lea &lt;john@status.im&gt;
+  
 
 ## Abstract
 
@@ -188,7 +189,7 @@ message WakuMessageArchiveIndexMetadata {
 }
 
 message WakuMessageArchiveIndex {
-  map\<string, WakuMessageArchiveIndexMetadata\> archives = 1
+  map<string, WakuMessageArchiveIndexMetadata> archives = 1
 }
 ```
 

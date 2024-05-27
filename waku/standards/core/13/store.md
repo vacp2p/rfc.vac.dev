@@ -2,22 +2,23 @@
 title: 13/WAKU2-STORE
 name: Waku v2 Store
 status: draft
-editor: Simon-Pierre Vivier \<simvivier@status.im\>
+editor: Simon-Pierre Vivier &lt;simvivier@status.im&gt;
 contributors:
-  - Dean Eigenmann \<dean@status.im\>
-  - Oskar Thorén \<oskarth@titanproxy.com\>
-  - Aaryamann Challani \<aaryamann@status.im\>
-  - Sanaz Taheri \<sanaz@status.im\>
-  - Hanno Cornelius \<hanno@status.im\>
+  - Dean Eigenmann &lt;dean@status.im&gt;
+  - Oskar Thorén &lt;oskarth@titanproxy.com&gt;
+  - Aaryamann Challani &lt;aaryamann@status.im&gt;
+  - Sanaz Taheri &lt;sanaz@status.im&gt;
+  - Hanno Cornelius &lt;hanno@status.im&gt;
 ---
 - Status: draft
-- Editor: Simon-Pierre Vivier \<simvivier@status.im\>
-- Contributors::
-  - Dean Eigenmann \<dean@status.im\>
-  - Oskar Thorén \<oskarth@titanproxy.com\>
-  - Aaryamann Challani \<aaryamann@status.im\>
-  - Sanaz Taheri \<sanaz@status.im\>
-  - Hanno Cornelius \<hanno@status.im\>
+- Editor: Simon-Pierre Vivier &lt;simvivier@status.im&gt;
+- Contributors:
+  - Dean Eigenmann &lt;dean@status.im&gt;
+  - Oskar Thorén &lt;oskarth@titanproxy.com&gt;
+  - Aaryamann Challani &lt;aaryamann@status.im&gt;
+  - Sanaz Taheri &lt;sanaz@status.im&gt;
+  - Hanno Cornelius &lt;hanno@status.im&gt;
+  
 
 ## Abstract
 This specification explains the `13/WAKU2-STORE` protocol which enables querying of messages received through the relay protocol and 

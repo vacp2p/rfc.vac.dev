@@ -2,11 +2,11 @@
 title: 66/WAKU2-METADATA
 name: Waku Metadata Protocol
 status: draft
-editor: Alvaro Revuelta \<alrevuelta@status.im\>
+editor: Alvaro Revuelta &lt;alrevuelta@status.im&gt;
 contributors:
 ---
 - Status: draft
-- Editor: Alvaro Revuelta \<alrevuelta@status.im\>
+- Editor: Alvaro Revuelta &lt;alrevuelta@status.im&gt;
 
 ## Abstract
 This specification describes the metadata that can be associated with a [10/WAKU2](../10/waku2) node.

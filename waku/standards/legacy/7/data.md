@@ -2,16 +2,17 @@
 title: 7/WAKU-DATA
 name: Waku Envelope data field
 status: stable
-editor: Oskar Thorén \<oskarth@titanproxy.com\>
+editor: Oskar Thorén &lt;oskarth@titanproxy.com&gt;
 contributors:
-  - Dean Eigenmann \<dean@status.im\>
-  - Kim De Mey \<kimdemey@status.im\>
+  - Dean Eigenmann &lt;dean@status.im&gt;
+  - Kim De Mey &lt;kimdemey@status.im&gt;
 ---
 - Status: stable
-- Editor: Oskar Thorén \<oskarth@titanproxy.com\>
-- Contributors::
-  - Dean Eigenmann \<dean@status.im\>
-  - Kim De Mey \<kimdemey@status.im\>
+- Editor: Oskar Thorén &lt;oskarth@titanproxy.com&gt;
+- Contributors:
+  - Dean Eigenmann &lt;dean@status.im&gt;
+  - Kim De Mey &lt;kimdemey@status.im&gt;
+  
 
 This specification describes the encryption, decryption and signing of the content in the [data field used in Waku](../6/waku1#abnf-specification).
 

@@ -2,22 +2,23 @@
 title: 10/WAKU2
 name: Waku v2
 status: draft
-editor: Hanno Cornelius \<hanno@status.im\> 
+editor: Hanno Cornelius &lt;hanno@status.im&gt; 
 contributors:
-  - Sanaz Taheri \<sanaz@status.im\>
-  - Hanno Cornelius \<hanno@status.im\>
-  - Reeshav Khan \<reeshav@status.im\>
-  - Daniel Kaiser \<danielkaiser@status.im\>
-  - Oskar Thorén \<oskarth@titanproxy.com\>
+  - Sanaz Taheri &lt;sanaz@status.im&gt;
+  - Hanno Cornelius &lt;hanno@status.im&gt;
+  - Reeshav Khan &lt;reeshav@status.im&gt;
+  - Daniel Kaiser &lt;danielkaiser@status.im&gt;
+  - Oskar Thorén &lt;oskarth@titanproxy.com&gt;
 ---
 - Status: draft
-- Editor: Hanno Cornelius \<hanno@status.im\>
-- Contributors::
-  - Sanaz Taheri \<sanaz@status.im\>
-  - Hanno Cornelius \<hanno@status.im\>
-  - Reeshav Khan \<reeshav@status.im\>
-  - Daniel Kaiser \<danielkaiser@status.im\>
-  - Oskar Thorén \<oskarth@titanproxy.com\>
+- Editor: Hanno Cornelius &lt;hanno@status.im&gt;
+- Contributors:
+  - Sanaz Taheri &lt;sanaz@status.im&gt;
+  - Hanno Cornelius &lt;hanno@status.im&gt;
+  - Reeshav Khan &lt;reeshav@status.im&gt;
+  - Daniel Kaiser &lt;danielkaiser@status.im&gt;
+  - Oskar Thorén &lt;oskarth@titanproxy.com&gt;
+  
 
 ## Abstract
 
@@ -351,13 +352,9 @@ therefore the service obtained in the protocol is linkable to the beneficiary's 
 For `13/WAKU2-STORE`, the queried node would be able to link the querying node's `PeerID` to its queried topics.
 Likewise, in the `12/WAKU2-FILTER`, a full node can link the light node's `PeerID`s to its content filter.
 
-
 <!-- TODO: to inspect the nim-libp2p codebase and figure out the exact use of PeerIDs in direct communication, it might be the case that the requester does not have to disclose its PeerID-->
 
-
-
 <!--TODO: might be good to add a figure visualizing the Waku protocol stack and the security features of each layer-->
-
 
 ## Appendix C: Implementation Notes
 

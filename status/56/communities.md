@@ -4,14 +4,15 @@ name: Status Communities that run over Waku v2
 status: draft
 category: Standards Track
 description: Status Communities allow multiple users to communicate in a discussion space. This is a key feature of the Status application.
-editor: Aaryamann Challani \<aaryamann@status.im\>
+editor: Aaryamann Challani &lt;aaryamann@status.im&gt;
 contributors:
-- Andrea Piana \<andreap@status.im\>
+- Andrea Piana &lt;andreap@status.im&gt;
 ---
 - Status: draft
 - Category: Standards Track
-- Editor: Aaryamann Challani \<aaryamann@status.im\>
-- Contributors::
+- Editor: Aaryamann Challani &lt;aaryamann@status.im&gt;
+- Contributors:
+  - Andrea Piana &lt;andreap@status.im&gt;
   
 
 ## Abstract
@@ -126,7 +127,7 @@ message ChatIdentity {
   // ens_name is the valid ENS name associated with the chat key
   string ens_name = 2;
   // images is a string indexed mapping of images associated with an identity
-  map\<string, IdentityImage\> images = 3;
+  map<string, IdentityImage> images = 3;
   // display name is the user set identity
   string display_name = 4;
   // description is the user set description
@@ -185,7 +186,7 @@ message CommunityAdminSettings {
 
 message CommunityChat {
   // A map of members in the community to their roles in a chat
-  map\<string,CommunityMember\> members = 1;
+  map<string,CommunityMember> members = 1;
   // The permissions of the chat
   CommunityPermissions permissions = 2;
   // The metadata of the chat
@@ -268,17 +269,17 @@ message CommunityDescription {
   // The Lamport timestamp of the message
   uint64 clock = 1;
   // A mapping of members in the community to their roles
-  map\<string,CommunityMember\> members = 2;
+  map<string,CommunityMember> members = 2;
   // The permissions of the Community
   CommunityPermissions permissions = 3;
   // The metadata of the Community
   ChatIdentity identity = 5;
   // A mapping of chats to their details
-  map\<string,CommunityChat\> chats = 6;
+  map<string,CommunityChat> chats = 6;
   // A list of banned members
   repeated string ban_list = 7;
   // A mapping of categories to their details
-  map\<string,CommunityCategory\> categories = 8;
+  map<string,CommunityCategory> categories = 8;
   // The admin settings of the Community
   CommunityAdminSettings admin_settings = 10;
   // If the community is encrypted
@@ -303,12 +304,12 @@ The content topic MUST be the first four bytes of the keccak-256 hash of the com
 hash = hex(keccak256(encodeToHex(compressedPublicKey)))
 
 topicLen = 4
-if len(hash) \< topicLen {
+if len(hash) < topicLen {
     topicLen = len(hash)
 }
 
 var topic [4]byte
-for i = 0; i \< topicLen; i++ {
+for i = 0; i < topicLen; i++ {
     topic[i] = hash[i]
 }
 
@@ -327,11 +328,11 @@ The content topic that Community channels/chats use MUST be the hex-encoded kecc
 hash = hex(keccak256(encodeToHex(compressedPublicKey + chatId)))
 
 topicLen = 4
-if len(hash) \< topicLen {
+if len(hash) < topicLen {
     topicLen = len(hash)
 }
 var topic [4]byte
-for i = 0; i \< topicLen; i++ {
+for i = 0; i < topicLen; i++ {
     topic[i] = hash[i]
 }
 
@@ -348,11 +349,11 @@ The content topic MUST be the hex-encoded keccak-256 hash of the public key of t
 hash = hex(keccak256(encodeToHex(publicKey)))
 
 topicLen = 4
-if len(hash) \< topicLen {
+if len(hash) < topicLen {
     topicLen = len(hash)
 }
 var topic [4]byte
-for i = 0; i \< topicLen; i++ {
+for i = 0; i < topicLen; i++ {
     topic[i] = hash[i]
 }
 

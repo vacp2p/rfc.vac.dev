@@ -2,14 +2,15 @@
 title: 3/REMOTE-LOG
 name: Remote log specification
 status: draft
-editor: Oskar Thorén \<oskarth@titanproxy.com\>
+editor: Oskar Thorén &lt;oskarth@titanproxy.com&gt;
 contributors:
-  - Dean Eigenmann \<dean@status.im\>
+  - Dean Eigenmann &lt;dean@status.im&gt;
 ---
 - Status: draft
-- Editor: Oskar Thorén \<oskarth@titanproxy.com\>
-- Contributors::
-  - Dean Eigenmann \<dean@status.im\>
+- Editor: Oskar Thorén &lt;oskarth@titanproxy.com&gt;
+- Contributors:
+  - Dean Eigenmann &lt;dean@status.im&gt;
+  
 
 A remote log is a replication of a local log. This means a node can read data that originally came from a node that is offline.
 
@@ -126,7 +127,7 @@ message RemoteLog {
 
 
 
-<!-- TODO: Consider making more useful in conjunction with metadata field. It makes sense to explicitly list what sequence a message is \<local hash, remote hash, data, seqid\> this way I can easily sync a messages prior or after a specific number. To enable this to be dynamic it might make sense to add page info so that I am aware which page I can find seqid on -->
+<!-- TODO: Consider making more useful in conjunction with metadata field. It makes sense to explicitly list what sequence a message is &lt;local hash, remote hash, data, seqid&gt; this way I can easily sync a messages prior or after a specific number. To enable this to be dynamic it might make sense to add page info so that I am aware which page I can find seqid on -->
 
 
 ## Synchronization
@@ -157,11 +158,11 @@ The *remote log* protobuf is what is stored in the name system.
 <!-- diagram -->
 
 
-\<p align="center"\>
-    \<img src="./images/remote-log.png" /\>
-    \<br /\>
+&lt;p align="center"&gt;
+    &lt;img src="./images/remote-log.png" /&gt;
+    &lt;br /&gt;
     Figure 1: Remote log data synchronization.
-\</p\>
+&lt;/p&gt;
 
 
 <!-- Document the flow wrt operations -->
@@ -243,4 +244,4 @@ Copyright and related rights waived via [CC0](https://creativecommons.org/public
 
 ## Footnotes
 
-[^1]:  \<https://github.com/vacp2p/research/tree/master/remote_log\>
+[^1]:  &lt;https://github.com/vacp2p/research/tree/master/remote_log&gt;

@@ -2,13 +2,14 @@
 title: RLN-STEALTH-COMMITMENTS
 name: RLN Stealth Commitment Usage
 category: Standards Track
-editor: Aaryamann Challani \<aaryamann@status.im\>
+editor: Aaryamann Challani &lt;aaryamann@status.im&gt;
 contributors:
-- Jimmy Debe \<jimmy@status.im\>
+- Jimmy Debe &lt;jimmy@status.im&gt;
 ---
 - Category: Standards Track
-- Editor: Aaryamann Challani \<aaryamann@status.im\>
-- Contributors::
+- Editor: Aaryamann Challani &lt;aaryamann@status.im&gt;
+- Contributors:
+  - Jimmy Debe &lt;jimmy@status.im&gt;
   
 
 ## Abstract

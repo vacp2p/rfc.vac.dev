@@ -1,8 +1,8 @@
 function isNumber(value) {
-  if (true === Array.isArray(value)) {
+  if (Array.isArray(value)) {
     return false;
   }
-  return !isNaN(parseInt(value, 10));
+  return !isNaN(value);
 }
 
 /*

@@ -2,11 +2,11 @@
 title: 30/ADAPTIVE-NODES
 name: Adaptive nodes
 status: draft
-editor: Oskar Thorén \<oskarth@titanproxy.com\>
+editor: Oskar Thorén &lt;oskarth@titanproxy.com&gt;
 contributors:
 ---
 - Status: draft
-- Editor: Oskar Thorén \<oskarth@titanproxy.com\>
+- Editor: Oskar Thorén &lt;oskarth@titanproxy.com&gt;
 
 This is an informational spec that show cases the concept of adaptive nodes.
 

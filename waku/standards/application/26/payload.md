@@ -2,11 +2,11 @@
 title: 26/WAKU2-PAYLOAD
 name: Waku Message Payload Encryption
 status: draft
-editor: Oskar Thoren \<oskarth@titanproxy.com\>
+editor: Oskar Thoren &lt;oskarth@titanproxy.com&gt;
 contributors:
 ---
 - Status: draft
-- Editor: Oskar Thoren \<oskarth@titanproxy.com\>
+- Editor: Oskar Thoren &lt;oskarth@titanproxy.com&gt;
 
 This specification describes how Waku provides confidentiality, authenticity, and integrity, as well as some form of unlinkability.
 Specifically, it describes how encryption, decryption and signing works in [6/WAKU1](../../legacy/6/waku1) and in [10/WAKU2 spec](../../core/10/waku2) with [14/WAKU-MESSAGE version 1](../../core/14/message#version1).

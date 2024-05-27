@@ -2,16 +2,20 @@
 title: 62/STATUS-Payloads
 name: Status Message Payloads
 status: draft
-editor: r4bbit \<r4bbit@status.im\>
+editor: r4bbit &lt;r4bbit@status.im&gt;
 contributors: 
-- Adam Babik \<adam@status.im\>
-- Andrea Maria Piana \<andreap@status.im\>
-- Oskar Thoren \<oskarth@titanproxy.com\>
-- Samuel Hawksby-Robinson \<samuel@status.im\>
+- Adam Babik &lt;adam@status.im&gt;
+- Andrea Maria Piana &lt;andreap@status.im&gt;
+- Oskar Thoren &lt;oskarth@titanproxy.com&gt;
+- Samuel Hawksby-Robinson &lt;samuel@status.im&gt;
 ---
 - Status: draft
-- Editor: r4bbit \<r4bbit@status.im\>
-- Contributors::
+- Editor: r4bbit &lt;r4bbit@status.im&gt;
+- Contributors:
+  - Adam Babik &lt;adam@status.im&gt;
+  - Andrea Maria Piana &lt;andreap@status.im&gt;
+  - Oskar Thoren &lt;oskarth@titanproxy.com&gt;
+  - Samuel Hawksby-Robinson &lt;samuel@status.im&gt;
   
 
 ## Abstract
@@ -285,9 +289,7 @@ message DiscordMessageAttachment {
 A node requires message types to decide how to encrypt a particular message and what metadata needs to be attached when passing a message to the transport layer.
 For more on this, see [10/WAKU2](../../waku/standards/core/10/waku2).
 
-
 <!-- TODO: This reference is a bit odd, considering the layer payloads should interact with is Secure Transport, and not Whisper/Waku. This requires more detail -->
-
 
 
 The following messages types MUST be supported:
@@ -317,7 +319,7 @@ This is where the basic algorithm of Lamport timestamp would fall short as it's 
 
 The status client therefore makes a "bid", speculating that it will beat the current chat-timestamp, s.t. the status client's Lamport timestamp format is: `clock = `max({timestamp}, chat_clock + 1)`
 
-This will satisfy the Lamport requirement, namely: a -\> b then T(a) \< T(b)
+This will satisfy the Lamport requirement, namely: a -> b then T(a) < T(b)
 
 `timestamp` MUST be Unix time calculated, when the node creates the message, in milliseconds. 
 This field SHOULD not be relied upon for message ordering.
@@ -600,7 +602,7 @@ message SyncPairInstallation {
 message ChatIdentity {
   uint64 clock = 1;
   string ens_name = 2;
-  map\<string, IdentityImage\> images = 3;
+  map&lt;string, IdentityImage&gt; images = 3;
   string display_name = 4;
   string description = 5;
   string color = 6;
@@ -619,12 +621,12 @@ message ChatIdentity {
 | ----- | ---- | ---- | ---- |
 | 1 | clock | `uint64` | Clock value of the message | 
 | 2| ens_name | `string` | A valid ENS associated with the chat key |
-| 3 | images | `map\<string, IdentityImage\>` | Image data associated with the chat key |
+| 3 | images | `map<string, IdentityImage>` | Image data associated with the chat key |
 | 4 | display_name | `string` | The self-assigned display_name of the chat key |
 | 5 | description | `string` | The description of the chat |
 | 6 | color | `string` | The color of the chat |
 | 7 | emoji | `string` | The emoji of the chat |
-| 8 | social_links | `array\<SocialLink\>` | A list of links to social platforms |
+| 8 | social_links | `array<SocialLink>` | A list of links to social platforms |
 | 9 | first_message_timestamp | `uint32` | First known message timestamp in seconds |
 
 ### CommunityDescription
@@ -635,19 +637,19 @@ message ChatIdentity {
 ```protobuf
 message CommunityDescription {
   uint64 clock = 1;
-  map\<string,CommunityMember\> members = 2;
+  map&lt;string,CommunityMember&gt; members = 2;
   CommunityPermissions permissions = 3;
   ChatIdentity identity = 5;
-  map\<string,CommunityChat\> chats = 6;
+  map&lt;string,CommunityChat&gt; chats = 6;
   repeated string ban_list = 7;
-  map\<string,CommunityCategory\> categories = 8;
+  map&lt;string,CommunityCategory&gt; categories = 8;
   uint64 archive_magnetlink_clock = 9;
   CommunityAdminSettings admin_settings = 10;
   string intro_message = 11;
   string outro_message = 12;
   bool encrypted = 13;
   repeated string tags = 14;
-  map\<string, CommunityTokenPermission\> token_permissions = 15;
+  map&lt;string, CommunityTokenPermission&gt; token_permissions = 15;
   repeated CommunityTokenMetadata community_tokens_metadata = 16;
   uint64 active_members_count = 17;
 }
@@ -686,13 +688,13 @@ message CommunityPermissions {
 | Field | Name | Type | Description |
 | ----- | ---- | ---- | ---- |
 | 1 | clock | `uint64` | Clock value of the message | 
-| 2| members | `map\<string, CommunityMember\>` | The members of the community |
+| 2| members | `map<string, CommunityMember>` | The members of the community |
 | 3 | permissions | `CommunityPermissions` | Image data associated with the chat key |
 | 4 | display_name | `string` | The self-assigned display_name of the chat key |
 | 5 | description | `string` | The description of the chat |
 | 6 | color | `string` | The color of the chat |
 | 7 | emoji | `string` | The emoji of the chat |
-| 8 | social_links | `array\<SocialLink\>` | A list of links to social platforms |
+| 8 | social_links | `array<SocialLink>` | A list of links to social platforms |
 | 9 | first_message_timestamp | `uint32` | First known message timestamp in seconds |
 
 ### CommunityRequestToJoin
@@ -728,7 +730,7 @@ message RevealedAccount {
 | 3 | chat_id | `string` | The id of the chat to request access to |
 | 4 | community_id | `bytes` | The public key of the community |
 | 5 | display_name | `string` | The display name of the usre sending the request |
-| 6 | revealed_accounts | `array\<RevealedAccount\>` | A list of accounts to reveal to the control node |
+| 6 | revealed_accounts | `array<RevealedAccount>` | A list of accounts to reveal to the control node |
 
 ### PinMessage
 
@@ -789,7 +791,7 @@ message EditMessage {
 | 5 | grant | `bytes` | A grant for a community edit messages  |
 | 6 | message_type | `MessageType` | The type of message  |
 | 7 | content_type | `ChatMessage.ContentType` | The updated content type of the message  |
-| 8 | unfurled_links | `array\<UnfurledLink\>` | Updated link metadata  |
+| 8 | unfurled_links | `array<UnfurledLink>` | Updated link metadata  |
 
 
 ### DeleteMessage
@@ -1042,7 +1044,7 @@ message CommunityEditSharedAddresses {
 | ----- | ---- | ---- | ---- |
 | 1 | clock | `uint64` | Clock value of the message | 
 | 2 | community_id | `bytes` | The id of the community |
-| 3 | revealed_accounts | `array\<RevealedAccount\>` | A list of revealed accounts |
+| 3 | revealed_accounts | `array&lt;RevealedAccount&gt;` | A list of revealed accounts |
 
 ## Upgradability
 

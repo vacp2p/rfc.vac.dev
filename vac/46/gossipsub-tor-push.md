@@ -3,12 +3,12 @@ title: 46/GOSSIPSUB-TOR-PUSH
 name: Gossipsub Tor Push
 status: raw
 category: Standards Track
-editor: Daniel Kaiser \<danielkaiser@status.im\>
+editor: Daniel Kaiser &lt;danielkaiser@status.im&gt;
 contributors:
 ---
 - Status: raw
 - Category: Standards Track
-- Editor: Daniel Kaiser \<danielkaiser@status.im\>
+- Editor: Daniel Kaiser &lt;danielkaiser@status.im&gt;
 
 ## Abstract
 

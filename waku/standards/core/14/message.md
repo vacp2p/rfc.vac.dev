@@ -3,23 +3,24 @@ title: 14/WAKU2-MESSAGE
 name: Waku v2 Message
 status: draft
 category: Standards Track
-editor: Hanno Cornelius \<hanno@status.im\>
+editor: Hanno Cornelius &lt;hanno@status.im&gt;
 contributors:
-  - Sanaz Taheri \<sanaz@status.im\>
-  - Aaryamann Challani \<aaryamann@status.im\>
-  - Lorenzo Delgado \<lorenzo@status.im\>
-  - Abhimanyu Rawat \<abhi@status.im\>
-  - Oskar Thorén \<oskarth@titanproxy.com\>
+  - Sanaz Taheri &lt;sanaz@status.im&gt;
+  - Aaryamann Challani &lt;aaryamann@status.im&gt;
+  - Lorenzo Delgado &lt;lorenzo@status.im&gt;
+  - Abhimanyu Rawat &lt;abhi@status.im&gt;
+  - Oskar Thorén &lt;oskarth@titanproxy.com&gt;
 ---
 - Status: draft
 - Category: Standards Track
-- Editor: Hanno Cornelius \<hanno@status.im\>
-- Contributors::
-  - Sanaz Taheri \<sanaz@status.im\>
-  - Aaryamann Challani \<aaryamann@status.im\>
-  - Lorenzo Delgado \<lorenzo@status.im\>
-  - Abhimanyu Rawat \<abhi@status.im\>
-  - Oskar Thorén \<oskarth@titanproxy.com\>
+- Editor: Hanno Cornelius &lt;hanno@status.im&gt;
+- Contributors:
+  - Sanaz Taheri &lt;sanaz@status.im&gt;
+  - Aaryamann Challani &lt;aaryamann@status.im&gt;
+  - Lorenzo Delgado &lt;lorenzo@status.im&gt;
+  - Abhimanyu Rawat &lt;abhi@status.im&gt;
+  - Oskar Thorén &lt;oskarth@titanproxy.com&gt;
+  
 
 ## Abstract
 
@@ -172,7 +173,7 @@ Waku message hash computation (`meta` attribute not present):
 pubsub_topic = "/waku/2/default-waku/proto" (0x2f77616b752f322f64656661756c742d77616b752f70726f746f)
 message.payload = 0x010203045445535405060708
 message.content_topic = "/waku/2/default-content/proto" (0x2f77616b752f322f64656661756c742d636f6e74656e742f70726f746f)
-message.meta = \<not-present\>
+message.meta = <not-present>
 message.timestamp = 0x175789bfa23f8400
 
 message_hash = 0xa2554498b31f5bcdfcbf7fa58ad1c2d45f0254f3f8110a85588ec3cf10720fd8

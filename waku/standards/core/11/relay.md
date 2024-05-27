@@ -2,16 +2,17 @@
 title: 11/WAKU2-RELAY
 name: Waku v2 Relay
 status: stable
-editor: Hanno Cornelius \<hanno@status.im\>
+editor: Hanno Cornelius &lt;hanno@status.im&gt;
 contributors:
-  - Oskar Thorén \<oskarth@titanproxy.com\>
-  - Sanaz Taheri \<sanaz@status.im\>
+  - Oskar Thorén &lt;oskarth@titanproxy.com&gt;
+  - Sanaz Taheri &lt;sanaz@status.im&gt;
 ---
 - Status: stable
-- Editor: Hanno Cornelius \<hanno@status.im\>
-- Contributors::
-  - Oskar Thorén \<oskarth@titanproxy.com\>
-  - Sanaz Taheri \<sanaz@status.im\>
+- Editor: Hanno Cornelius &lt;hanno@status.im&gt;
+- Contributors:
+  - Oskar Thorén &lt;oskarth@titanproxy.com&gt;
+  - Sanaz Taheri &lt;sanaz@status.im&gt;
+  
 
 `11/WAKU2-RELAY` specifies a [Publish/Subscribe approach](https://docs.libp2p.io/concepts/publish-subscribe/) to peer-to-peer messaging with a strong focus on privacy, censorship-resistance, security and scalability.
 Its current implementation is a minor extension of the [libp2p GossipSub protocol](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README) and prescribes gossip-based dissemination.
@@ -92,10 +93,10 @@ message RPC {
 }
 ```
 
-\> **_NOTE:_**
+&gt; **_NOTE:_**
 The various [control messages](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/gossipsub-v1.0##control-messages) defined for GossipSub are used as specified there.
 
-\> **_NOTE:_**
+&gt; **_NOTE:_**
 The [`TopicDescriptor`](https://github.com/libp2p/specs/blob/master/pubsub/README##the-topic-descriptor) is not currently used by `11/WAKU2-RELAY`.
 
 ### Message fields
@@ -126,7 +127,7 @@ The following usage requirements apply:
 
 - The `topicid` field MUST contain the pubsub topic.
 
-\> Note: The `topicid` refering to pubsub topic and
+&gt; Note: The `topicid` refering to pubsub topic and
 `topicId` refering to content-topic are detailed in [23/WAKU2-TOPICS](../../../informational/23/topics).
 
 ### Signature Policy

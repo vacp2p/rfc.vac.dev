@@ -4,15 +4,16 @@ name: Status Waku2 Usage
 status: raw
 category: Best Current Practice
 description: Defines how the Status application uses the Waku protocols.
-editor: Aaryamann Challani \<aaryamann@status.im\>
+editor: Aaryamann Challani &lt;aaryamann@status.im&gt;
 contributors: 
-- Jimmy Debe \<jimmy@status.im\>
+- Jimmy Debe &lt;jimmy@status.im&gt;
 
 ---
 - Status: raw
 - Category: Best Current Practice
-- Editor: Aaryamann Challani \<aaryamann@status.im\>
-- Contributors::
+- Editor: Aaryamann Challani &lt;aaryamann@status.im&gt;
+- Contributors:
+  - Jimmy Debe &lt;jimmy@status.im&gt;
   
 
 ## Abstract

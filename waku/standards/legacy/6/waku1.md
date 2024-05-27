@@ -2,20 +2,21 @@
 title: 6/WAKU1
 name: Waku v1
 status: stable
-editor: Oskar Thorén \<oskarth@titanproxy.com\>
+editor: Oskar Thorén &lt;oskarth@titanproxy.com&gt;
 contributors:
-  - Adam Babik \<adam@status.im\>
-  - Andrea Maria Piana \<andreap@status.im\>
-  - Dean Eigenmann \<dean@status.im\>
-  - Kim De Mey \<kimdemey@status.im\>
+  - Adam Babik &lt;adam@status.im&gt;
+  - Andrea Maria Piana &lt;andreap@status.im&gt;
+  - Dean Eigenmann &lt;dean@status.im&gt;
+  - Kim De Mey &lt;kimdemey@status.im&gt;
 ---
 - Status: stable
-- Editor: Oskar Thorén \<oskarth@titanproxy.com\>
-- Contributors::
-  - Adam Babik \<adam@status.im\>
-  - Andrea Maria Piana \<andreap@status.im\>
-  - Dean Eigenmann \<dean@status.im\>
-  - Kim De Mey \<kimdemey@status.im\>
+- Editor: Oskar Thorén &lt;oskarth@titanproxy.com&gt;
+- Contributors:
+  - Adam Babik &lt;adam@status.im&gt;
+  - Andrea Maria Piana &lt;andreap@status.im&gt;
+  - Dean Eigenmann &lt;dean@status.im&gt;
+  - Kim De Mey &lt;kimdemey@status.im&gt;
+  
 
 This specification describes the format of Waku packets within the ÐΞVp2p Wire Protocol. This spec substitutes [EIP-627](https://eips.ethereum.org/EIPS/eip-627). Waku is a fork of the original Whisper protocol that enables better usability for resource restricted devices, such as mostly-offline bandwidth-constrained smartphones. It does this through (a) light node support, (b) historic envelopes (with a mailserver) (c) expressing topic interest for better bandwidth usage and (d) basic rate limiting.
 
@@ -446,7 +447,7 @@ Waku is a different subprotocol from Whisper so it isn't directly compatible. Ho
 2. C picks up envelope from A and B and relays them both to Waku and Whisper.
 3. A receives envelope on Waku; B on Whisper.
 
-**Note**: This flow means if another bridge C1 is active, we might get duplicate relaying for a envelope between C1 and C2. I.e. Whisper(\<\>Waku\<\>Whisper)\<\>Waku, A-C1-C2-B. Theoretically this bridging chain can get as long as TTL permits.
+**Note**: This flow means if another bridge C1 is active, we might get duplicate relaying for a envelope between C1 and C2. I.e. Whisper(&lt;&gt;Waku&lt;&gt;Whisper)&lt;&gt;Waku, A-C1-C2-B. Theoretically this bridging chain can get as long as TTL permits.
 
 ### Forward Compatibility
 

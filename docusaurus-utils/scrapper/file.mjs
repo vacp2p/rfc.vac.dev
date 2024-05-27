@@ -36,12 +36,26 @@ export async function writeLargeFile(path, data) {
 
 export function removeDirectory(path) {
   return new Promise((resolve, reject) => {
-    fs.rmdir(path, {recursive: true}, err => {
+    fs.rm(path, {recursive: true}, err => {
       if (err) {
         reject(err)
       }
 
       resolve();
+    })
+  })
+}
+
+export function directoryExists(path) {
+  return new Promise((resolve, _) => {
+    const accessBitwiseOperator = fs.constants.F_OK | fs.constants.R_OK;
+
+    fs.access(path, accessBitwiseOperator, err => {
+      if (err) {
+        resolve(false)
+      } else {
+        resolve(true)
+      }
     })
   })
 }

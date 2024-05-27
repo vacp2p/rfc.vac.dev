@@ -8,9 +8,9 @@ pagination_prev: null
 pagination_next: null
 ---
 
-- [Status](/status)
-
 - [Vac](/vac)
+
+- [Status](/status)
 
 - [Waku](/waku)
 
