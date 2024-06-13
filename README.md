@@ -1,11 +1,9 @@
-# Logos Docs Template
+## Vac RFC Website
+This repository contains documents that have been discussed and pushed from the [rfc-index](https://github.com/vacp2p/rfc-index) repository.
+Pull requests opened in this repository must relate to Vac RFC website updates,
+other updates will be closed.
 
 The template repository for docs using [logos-docusaurus-plugins](https://github.com/acid-info/logos-docusaurus-plugins).
-
-
-## Use Cases
-- [Codex docs](https://docs.codex.storage/)
-
 
 ## How to Run Locally
 
