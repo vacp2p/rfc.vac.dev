@@ -1,11 +1,7 @@
-# Logos Docs Template
-
-The template repository for docs using [logos-docusaurus-plugins](https://github.com/acid-info/logos-docusaurus-plugins).
-
-
-## Use Cases
-- [Codex docs](https://docs.codex.storage/)
-
+## Vac RFC Website
+This repository contains documents that have been discussed and pushed from the [rfc-index](https://github.com/vacp2p/rfc-index) repository.
+Pull requests opened in this repository must relate to Vac RFC website updates,
+other updates will be closed.
 
 ## How to Run Locally
 
@@ -35,6 +31,7 @@ $ yarn start
 
 
 ## Configuration
+The template repository for docs using [logos-docusaurus-plugins](https://github.com/acid-info/logos-docusaurus-plugins).
 Edit the `docusaurus.config.js` file in the repository's root directory, and update the value of the `businessUnit` field in presets section; below is a list of valid values:
 - Logos
 - Codex
