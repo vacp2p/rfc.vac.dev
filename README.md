@@ -1,7 +1,7 @@
 ## Vac RFC Website
 This repository contains documents that have been discussed and pushed from the [rfc-index](https://github.com/vacp2p/rfc-index) repository.
 Pull requests opened in this repository must relate to Vac RFC website updates,
-pull request related to RFC specifications must be open in the rfc-index repository.
+pull request related to RFC specifications must be open in the [rfc-index](https://github.com/vacp2p/rfc-index) repository.
 
 ## How to Run Locally
 
