@@ -3,8 +3,15 @@ import path from "path";
 import { fetchFromGitHub } from "./github.mjs";
 import axios from 'axios'
 
-import { createDirectory, readFile, writeFile, writeLargeFile } from './file.mjs'
-import { adjustPathForMarkdown, vacMarkdownToDocusaurusMarkdown } from './markdown-convertor.mjs'
+import {
+  copyDirectory,
+  createDirectory,
+  getDirFiles,
+  readFile,
+  writeFile,
+  writeLargeFile
+} from './file.mjs'
+import { vacMarkdownToDocusaurusMarkdown } from './markdown-convertor.mjs'
 
 async function downloadFile(url, fullFilePath) {
   const request = await axios.get(url, {
@@ -16,16 +23,12 @@ async function downloadFile(url, fullFilePath) {
   await writeLargeFile(fullFilePath, request.data)
 }
 
-async function downloadAndModifyFile(url, filePath) {
-  const fullFilePath = path.join(process.cwd(), filePath)
-
-  await downloadFile(url, fullFilePath);
-
-  const fileExtension = path.extname(filePath)
+async function modifyFile(fullFilePath) {
+  const fileExtension = path.extname(fullFilePath)
   if (fileExtension === '.md' || fileExtension === '.mdx') {
     const fileBuffer = await readFile(fullFilePath);
     const fileContent = fileBuffer.toString();
-    const convertedFileContent = vacMarkdownToDocusaurusMarkdown(fileContent, filePath);
+    const convertedFileContent = vacMarkdownToDocusaurusMarkdown(fileContent, fullFilePath);
 
     await writeFile(fullFilePath, convertedFileContent);
   }
@@ -47,12 +50,31 @@ export async function fetchDirectoryContents(dirUrl, basePath, prefixToRemove) {
       const filePath = path.join(basePath, relativePath)
 
       if (file.type === 'file') {
-        await downloadAndModifyFile(file.download_url, filePath)
+        const fullFilePath = path.join(process.cwd(), filePath)
+
+        await downloadFile(file.download_url, fullFilePath);
+        await modifyFile(fullFilePath)
       } else if (file.type === 'dir') {
         await fetchDirectoryContents(file.url, basePath, prefixToRemove)
       }
     }
   } catch (e) {
     console.error('Error fetching files:', e)
+  }
+}
+
+export async function copyAndParseLocally(dirName) {
+  try {
+    const originalDir = path.join(process.cwd(), `../${dirName}`)
+    const newDir = path.join(process.cwd(),`./${dirName}`)
+
+    await copyDirectory(originalDir, newDir)
+    const allFiles = getDirFiles(newDir, [])
+
+    for (let i = 0; i < allFiles.length; i++) {
+      await modifyFile(allFiles[i]);
+    }
+  } catch (e) {
+    console.error('Error copying files:', e)
   }
 }
