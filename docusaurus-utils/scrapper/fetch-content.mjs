@@ -63,9 +63,9 @@ export async function fetchDirectoryContents(dirUrl, basePath, prefixToRemove) {
   }
 }
 
-export async function copyAndParseLocally(dirName) {
+export async function copyAndParseLocally(dirName, from) {
   try {
-    const originalDir = path.join(process.cwd(), `../${dirName}`)
+    const originalDir = from ? from : path.join(process.cwd(), `../${dirName}`)
     const newDir = path.join(process.cwd(),`./${dirName}`)
 
     await copyDirectory(originalDir, newDir)

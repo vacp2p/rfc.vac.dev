@@ -3,6 +3,7 @@ import fs from 'fs'
 import util from 'util'
 import stream from 'stream'
 import ncp from "ncp"
+import path from 'path'
 
 export function readFile(path) {
   return new Promise((resolve, reject) => {
@@ -118,4 +119,14 @@ export function getDirFiles(dir, files = []) {
     }
   }
   return files
+}
+
+export async function purgeOldFiles(dirName, dirPath = undefined) {
+  const directoryPath = dirPath ? dirPath : path.join(process.cwd(), dirName);
+  const shouldRemoveOldContent = await directoryExists(directoryPath);
+
+  if (shouldRemoveOldContent) {
+    await removeDirectory(directoryPath)
+    console.log(`Removed old ${dirName}`)
+  }
 }

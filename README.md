@@ -15,8 +15,7 @@ $ git clone https://github.com/acid-info/logos-docs-template.git
 $ yarn install
 ```
 
-3. Create .env and run the scraping script
-and 
+3. Create .env and run the scraping script (make sure you're located in the root of the project when running this command)
 ```bash
 $ yarn scrape
 ```
@@ -115,8 +114,13 @@ By default, this template utilizes the CSS styles defined in the [logos-docusaur
 
 1. Generate static files for production:
 
+- If you have ran `yarn scrape` previously, you can just run
 ```bash
 $ yarn build
+```
+- If not, you can use the next command for complete scrape and build process
+```bash
+$ yarn build:full
 ```
 
 The static files will be created in the `build` directory.

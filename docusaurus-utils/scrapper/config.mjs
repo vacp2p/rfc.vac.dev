@@ -33,8 +33,15 @@ if (FETCH_MODE === ALL_FETCH_MODES.GITHUB && !GITHUB_TOKEN) {
   throw new Error("Please provide the GITHUB_TOKEN")
 }
 
+const GIT_TEMP_DIR_NAME = "raw_temp"
+const GIT_ORG_NAME = "vacp2p"
+const GIT_SOURCE_REPO_NAME = "rfc-index"
+
 export {
   parsedIncludedDirs as INCLUDED_DIRS,
   FETCH_MODE,
-  GITHUB_TOKEN
+  GITHUB_TOKEN,
+  GIT_TEMP_DIR_NAME,
+  GIT_ORG_NAME,
+  GIT_SOURCE_REPO_NAME
 }
