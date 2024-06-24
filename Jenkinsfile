@@ -16,6 +16,8 @@ pipeline {
   environment {
     GIT_COMMITTER_NAME = 'status-im-auto'
     GIT_COMMITTER_EMAIL = 'auto@status.im'
+    INCLUDED_DIRS = 'codex,nomos,status,vac,waku'
+    FETCH_MODE = 'git'
   }
 
   stages {
