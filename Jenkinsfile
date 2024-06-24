@@ -25,6 +25,12 @@ pipeline {
       }
     }
 
+    stage('Scrape') {
+      steps {
+        sh 'yarn scrape'
+      }
+    }
+
     stage('Build') {
       steps { script {
         sh 'yarn build'
