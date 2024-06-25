@@ -2,6 +2,8 @@ import { mkdirp } from 'mkdirp'
 import fs from 'fs'
 import util from 'util'
 import stream from 'stream'
+import ncp from "ncp"
+import path from 'path'
 
 export function readFile(path) {
   return new Promise((resolve, reject) => {
@@ -72,5 +74,59 @@ export async function createDirectory(path) {
     return await mkdirp(path)
   } catch (error) {
     throw error;
+  }
+}
+
+export async function copyDirectory(from, to) {
+
+  const ncpOptions = {
+    stopOnErr: true,
+    limit: 32
+  }
+
+  return new Promise((resolve, reject) => {
+    ncp(from, to, ncpOptions, (data) => {
+      const isError = data instanceof Error || (Array.isArray(data) && data[0] instanceof Error);
+
+      if (isError) {
+        const error = (Array.isArray(data) ? data[0] : data);
+
+        reject(error);
+        return;
+      }
+
+      // No error happened here
+      if (data) {
+        resolve(data)
+      } else {
+        resolve()
+      }
+    })
+  })
+}
+
+export function getDirFiles(dir, files = []) {
+  const fileList = fs.readdirSync(dir)
+
+  for (const file of fileList) {
+    const filePath = `${dir}/${file}`
+    const isDir = fs.statSync(filePath).isDirectory()
+
+    if (isDir) {
+      getDirFiles(filePath, files)
+    } else {
+      files.push(filePath)
+    }
+  }
+  return files
+}
+
+export async function purgeOldFiles(dirName, dirPath = undefined) {
+  const directoryPath = dirPath ? dirPath : path.join(process.cwd(), dirName);
+  const shouldRemoveOldContent = await directoryExists(directoryPath);
+
+  if (shouldRemoveOldContent) {
+    await removeDirectory(directoryPath)
+    console.log(`Removed old ${dirName}`)
   }
 }

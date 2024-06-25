@@ -1,26 +1,54 @@
-import { fetchDirectoryContents } from './fetch-content.mjs'
 import path from 'path'
-import { directoryExists, removeDirectory } from './file.mjs'
+import { purgeOldFiles } from './file.mjs'
+import {
+  ALL_FETCH_MODES,
+  FETCH_MODE,
+  GIT_ORG_NAME,
+  GIT_SOURCE_REPO_NAME,
+  GIT_TEMP_DIR_NAME,
+  INCLUDED_DIRS,
+} from './config.mjs'
+import { copyAndParseLocally, fetchDirectoryContents } from './fetch-content.mjs'
+import { pullWithGit } from './git.mjs'
 
-const directoriesToSync = ['codex', 'nomos', 'status', 'vac', 'waku']
 
 async function main() {
-  for (let i = 0; i < directoriesToSync.length; i++) {
-    const dirName = directoriesToSync[i];
+  switch (FETCH_MODE) {
+    case ALL_FETCH_MODES.GIT: {
+      const tempDirPath = path.join(process.cwd(), GIT_TEMP_DIR_NAME);
 
-    const baseUrl = `https://api.github.com/repos/vacp2p/rfc-index/contents/${dirName}`
+      await pullWithGit(`${GIT_ORG_NAME}/${GIT_SOURCE_REPO_NAME}`, tempDirPath)
+      await sync(ALL_FETCH_MODES.GIT)
 
-    const baseSavePath = `./${dirName}/`
-    const prefixToRemove = dirName + '/'
-    const directoryPath = path.join(process.cwd(), dirName);
+      // Removes raw MDs so docusaurus doesn't parse them as well
+      await purgeOldFiles(GIT_TEMP_DIR_NAME, tempDirPath)
 
-    const shouldRemoveOldContent = await directoryExists(directoryPath);
-    if (shouldRemoveOldContent) {
-      await removeDirectory(directoryPath)
-      console.log(`Removed old ${dirName}`)
+      break;
+    }
+    case ALL_FETCH_MODES.GITHUB: {
+      await sync(ALL_FETCH_MODES.GITHUB)
+
+      break;
+    }
+  }
+}
+
+async function sync(mode) {
+  for (let i = 0; i < INCLUDED_DIRS.length; i++) {
+    const dirName = INCLUDED_DIRS[i];
+    await purgeOldFiles(dirName)
+
+    if (mode === ALL_FETCH_MODES.GITHUB) {
+      const baseUrl = `https://api.github.com/repos/${GIT_ORG_NAME}/${GIT_SOURCE_REPO_NAME}/contents/${dirName}`
+      const baseSavePath = `./${dirName}/`
+      const prefixToRemove = dirName + '/'
+
+      await fetchDirectoryContents(baseUrl, baseSavePath, prefixToRemove)
+    } else if (mode === ALL_FETCH_MODES.GIT) {
+      const rawFilePath = path.join(process.cwd(), GIT_TEMP_DIR_NAME, dirName);
+      await copyAndParseLocally(dirName, rawFilePath);
     }
 
-    await fetchDirectoryContents(baseUrl, baseSavePath, prefixToRemove)
     console.log(`Synced ${dirName}`)
   }
 }

@@ -1,7 +1,7 @@
 import { GITHUB_TOKEN } from './config.mjs'
 import axios from "axios";
 
-export async function fetchFromGitHub(url, callback) {
+export async function fetchFromGitHub(url) {
   const response = await axios.get(url, {
     headers: {
       'User-Agent': 'Node.js',
