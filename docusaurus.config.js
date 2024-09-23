@@ -5,6 +5,9 @@ const {
   sidebarItemsGenerator,
 } = require('./docusaurus-utils/sidebar/generator')
 
+const math = require('remark-math')
+const katex = require('rehype-katex')
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Vac',
@@ -32,6 +35,8 @@ const config = {
         id: 'codex',
         path: 'codex',
         routeBasePath: 'codex',
+        remarkPlugins: [math],
+        rehypePlugins: [katex],
         sidebarItemsGenerator,
       },
     ],
@@ -41,6 +46,8 @@ const config = {
         id: 'nomos',
         path: 'nomos',
         routeBasePath: 'nomos',
+        remarkPlugins: [math],
+        rehypePlugins: [katex],
         sidebarItemsGenerator,
       },
     ],
@@ -50,6 +57,8 @@ const config = {
         id: 'status',
         path: 'status',
         routeBasePath: 'status',
+        remarkPlugins: [math],
+        rehypePlugins: [katex],
         sidebarItemsGenerator,
       },
     ],
@@ -59,6 +68,8 @@ const config = {
         id: 'vac',
         path: 'vac',
         routeBasePath: 'vac',
+        remarkPlugins: [math],
+        rehypePlugins: [katex],
         sidebarItemsGenerator,
       },
     ],
@@ -68,6 +79,8 @@ const config = {
         id: 'waku',
         path: 'waku',
         routeBasePath: 'waku',
+        remarkPlugins: [math],
+        rehypePlugins: [katex],
         sidebarItemsGenerator,
       },
     ],
@@ -93,12 +106,24 @@ const config = {
           },
         },
         docs: {
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
           id: 'root-pages',
           routeBasePath: '/',
         },
         og: {},
       }),
     ],
+  ],
+
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
   ],
 
   themeConfig:
