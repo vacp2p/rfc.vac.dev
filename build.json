@@ -1,15 +1,15 @@
 {
-    "timestamp": "2024-10-04T18:46:36Z",
+    "timestamp": "2024-10-05T18:46:42Z",
     "git": {
         "commit": "278d706a477873f40fd7d2c15052ba8ebc22532c",
         "branch": "origin/master",
         "url": "git@github.com:vacp2p/rfc.vac.dev.git"
     },
     "build": {
-        "id": "222",
-        "number": "222",
+        "id": "223",
+        "number": "223",
         "name": "website/rfc.vac.dev",
         "slave": "linux-01",
-        "url": "https://ci.infra.status.im/job/website/job/rfc.vac.dev/222/"
+        "url": "https://ci.infra.status.im/job/website/job/rfc.vac.dev/223/"
     }
 }
