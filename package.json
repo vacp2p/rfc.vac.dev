@@ -17,7 +17,7 @@
     "build:full": "yarn scrape && yarn build"
   },
   "dependencies": {
-    "@acid-info/logos-docusaurus-preset": "^1.0.0-alpha.174",
+    "@acid-info/logos-docusaurus-preset": "^1.0.0-alpha.181",
     "@docusaurus/core": "2.4.1",
     "@docusaurus/preset-classic": "2.4.1",
     "@docusaurus/theme-mermaid": "^2.4.1",
