@@ -53,7 +53,7 @@ function enhanceMarkdownWithBulletPointsCorrected(input) {
       if (field.includes('\n')) {
         const [label, ...values] = field.split('\n')
         return `- ${label.charAt(0).toUpperCase() +
-        label.slice(1)}:\n  ${values.join('\n  ')}`
+          label.slice(1)}:\n  ${values.join('\n  ')}`
       } else {
         return `- ${field.charAt(0).toUpperCase() + field.slice(1)}`
       }
@@ -85,31 +85,31 @@ function parseSlugFromFrontmatter(content) {
 function escapeHtmlTagSymbols(content) {
   function replaceComparisonSymbol(text, symbol) {
     // Regex to match everything, but we'll handle what to replace in the callback
-    let regex = /(```[\s\S]+?```|`[^`]*`)|(<)/g;
-    let replacementString = "&lt;";
+    let regex = /(```[\s\S]+?```|`[^`]*`)|(<)/g
+    let replacementString = '&lt;'
 
-    if (symbol === ">") {
-      regex = /(```[\s\S]+?```|`[^`]*`)|(>)/g;
-      replacementString = "&gt;";
+    if (symbol === '>') {
+      regex = /(```[\s\S]+?```|`[^`]*`)|(>)/g
+      replacementString = '&gt;'
     }
 
     return text.replace(regex, function(match, code, lessThan) {
       if (code) {
         // It's a code segment, return it unchanged
-        return code;
+        return code
       } else if (lessThan) {
         // It's a '<' outside of code blocks, replace with '&lt;'
-        return replacementString;
+        return replacementString
       }
       // Default return (though practically unused in this setup)
-      return match;
-    });
+      return match
+    })
   }
 
-  content = replaceComparisonSymbol(content, "<")
-  content = replaceComparisonSymbol(content, ">")
+  content = replaceComparisonSymbol(content, '<')
+  content = replaceComparisonSymbol(content, '>')
 
-  return content;
+  return content
 }
 
 function unescapeHtmlComments(htmlString) {
@@ -118,9 +118,15 @@ function unescapeHtmlComments(htmlString) {
 
 function updateMarkdownLinksToExcludeMD(content) {
   function replaceLinks(match, p1, p2, p3) {
-    let url = p2.replace(/\.md$/, ''); // Remove .md extension from URL
-    let anchor = p3.replace(/^\//, ''); // Remove preceding '/' from anchor if exists
-    return `[${p1}](${url}${anchor ? '#' + anchor : ''})`;
+    // Skip if the link is an external link (starts with 'http://' or 'https://')
+    if (match.includes('http://') || match.includes('https://')) {
+      return match
+    }
+
+    let url = p2.replace(/\.md$/, '') // Remove .md extension from URL
+    let anchor = p3.replace(/^\//, '') // Remove preceding '/' from anchor if exists
+
+    return `[${p1}](${url}${anchor ? '#' + anchor : ''})`
   }
 
   const regex = /\[((?:(?!\]).)+)\]\(([^)]*?\.md)(?:\/#|\/#)?([^)]*)\)/g
@@ -129,7 +135,7 @@ function updateMarkdownLinksToExcludeMD(content) {
 }
 
 export function vacMarkdownToDocusaurusMarkdown(fileContent) {
-  let convertedContent = fileContent;
+  let convertedContent = fileContent
 
   // Remove 'tags' line from frontmatter because the format is wrong
   convertedContent = convertedContent.replace(/tags:.*\n?/, '')
@@ -151,7 +157,7 @@ export function vacMarkdownToDocusaurusMarkdown(fileContent) {
 
   convertedContent = updateMarkdownLinksToExcludeMD(convertedContent)
 
-  return convertedContent;
+  return convertedContent
 }
 
 export function adjustPathForMarkdown(filePath) {
