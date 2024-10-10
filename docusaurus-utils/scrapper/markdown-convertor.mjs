@@ -123,6 +123,9 @@ function updateMarkdownLinksToExcludeMD(content) {
       return match
     }
 
+    // replace ../../ with /
+    p2 = p2.replace(/\.\.\/\.\.\//g, '/')
+
     let url = p2.replace(/\.md$/, '') // Remove .md extension from URL
     let anchor = p3.replace(/^\//, '') // Remove preceding '/' from anchor if exists
 
