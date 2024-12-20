@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: Vac RFCs
-description: Codex is building a decentralised durability storage engine
+description: This website contains specifications from the Waku, Nomos, Codex, and Status projects that are part of the IFT portfolio.
 sidebar_class_name: hidden
 displayed_sidebar: null
 pagination_prev: null
