@@ -134,6 +134,20 @@ function updateMarkdownLinksToExcludeMD(content) {
   return content.replace(regex, replaceLinks)
 }
 
+function replaceLocalImagePathsWithGitHubUrls(content) {
+  return content.replace(
+    /(?:\(|\s|])\/(status|vac)\/[^\s)]+\.(png|jpg|jpeg|gif)/g,
+    match => {
+      const path =
+        match.match(/\/(status|vac)\/[^\s)]+\.(png|jpg|jpeg|gif)/)?.[0] || ''
+      return match.replace(
+        path,
+        `https://github.com/vacp2p/rfc-index/blob/main${path}?raw=true`,
+      )
+    },
+  )
+}
+
 export function vacMarkdownToDocusaurusMarkdown(fileContent) {
   let convertedContent = fileContent
 
@@ -156,6 +170,8 @@ export function vacMarkdownToDocusaurusMarkdown(fileContent) {
   convertedContent = enhanceMarkdownWithBulletPointsCorrected(convertedContent)
 
   convertedContent = updateMarkdownLinksToExcludeMD(convertedContent)
+
+  convertedContent = replaceLocalImagePathsWithGitHubUrls(convertedContent)
 
   return convertedContent
 }
