@@ -142,7 +142,7 @@ function replaceLocalImagePathsWithGitHubUrls(content) {
         match.match(/\/(status|vac)\/[^\s)]+\.(png|jpg|jpeg|gif)/)?.[0] || ''
       return match.replace(
         path,
-        `https://github.com/vacp2p/rfc-index/blob/main${path}?raw=true`,
+        `https://raw.githubusercontent.com/vacp2p/rfc-index/refs/heads/main/${path}`,
       )
     },
   )
