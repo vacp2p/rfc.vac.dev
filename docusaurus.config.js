@@ -138,34 +138,26 @@ const config = {
         ],
       },
       footer: {
-        copyright: 'Codex @2023<br/>All Rights Reserved.',
+        copyright: 'Vac @2025<br/>All Rights Reserved.',
         links: [
           {
             items: [
               {
-                href: 'https://twitter.com/Codex_storage',
+                href: 'https://x.com/vacp2p',
                 label: 'Twitter',
               },
               {
-                href: 'https://discord.gg/2NXGrsqmDq',
+                href: 'https://discord.gg/PQFdubGt6d',
                 label: 'Discord',
               },
               {
-                href: '/',
-                label: 'Docs',
-              },
-              {
-                href: 'https://github.com/codex-storage',
+                href: 'https://github.com/vacp2p',
                 label: 'Github',
               },
             ],
           },
           {
             items: [
-              {
-                href: '/',
-                label: 'Contact us',
-              },
               {
                 href: 'https://jobs.status.im/',
                 label: 'Work with us',
